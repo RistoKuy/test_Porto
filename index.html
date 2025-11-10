@@ -327,19 +327,19 @@
                             <!-- Carousel Container -->
                             <div class="poster-carousel h-full">
                                 <div class="poster-slide active">
-                                    <img src="img/poster1.jpg" alt="Poster Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    <img src="img/poster1.png" alt="Poster Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
                                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                                        <p class="text-white font-semibold">Poster Design 1</p>
+                                        <p class="text-white font-semibold">Poster Design</p>
                                     </div>
                                 </div>
                                 <div class="poster-slide">
-                                    <img src="img/poster2.jpg" alt="Packaging Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    <img src="img/package1.png" alt="Packaging Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
                                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                                         <p class="text-white font-semibold">Packaging Design</p>
                                     </div>
                                 </div>
                                 <div class="poster-slide">
-                                    <img src="img/poster3.jpg" alt="Booklet Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    <img src="img/booklet1.png" alt="Booklet Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
                                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                                         <p class="text-white font-semibold">Booklet Design</p>
                                     </div>
@@ -368,13 +368,13 @@
                             <!-- Carousel Container -->
                             <div class="illustration-carousel h-full">
                                 <div class="illustration-slide active">
-                                    <img src="img/illustration1.jpg" alt="Personal Illustration" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    <img src="img/illust1.png" alt="Personal Illustration" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
                                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                                         <p class="text-white font-semibold">Personal Illustration</p>
                                     </div>
                                 </div>
                                 <div class="illustration-slide">
-                                    <img src="img/illustration2.jpg" alt="Character Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    <img src="img/chara1.png" alt="Character Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
                                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                                         <p class="text-white font-semibold">Character Design</p>
                                     </div>
@@ -1094,76 +1094,105 @@
                 }
             });
 
-            // Poster Carousel functionality
-            let currentPosterSlide = 0;
-            const posterSlides = document.querySelectorAll('.poster-slide');
-            
-            function showPosterSlide(n) {
-                posterSlides.forEach(slide => slide.classList.remove('active'));
-                currentPosterSlide = (n + posterSlides.length) % posterSlides.length;
-                posterSlides[currentPosterSlide].classList.add('active');
+            // Universal Carousel System - Works for all media types
+            const carousels = {
+                poster: {
+                    currentSlide: 0,
+                    slides: document.querySelectorAll('.poster-slide')
+                },
+                illustration: {
+                    currentSlide: 0,
+                    slides: document.querySelectorAll('.illustration-slide')
+                },
+                photography: {
+                    currentSlide: 0,
+                    slides: document.querySelectorAll('.photography-slide')
+                }
+            };
+
+            // Generic function to show a slide for any carousel type
+            function showSlideForCarousel(carouselType, index) {
+                const carousel = carousels[carouselType];
+                if (!carousel || carousel.slides.length === 0) return;
+                
+                // Remove active class from all slides
+                carousel.slides.forEach(slide => slide.classList.remove('active'));
+                
+                // Calculate the correct index (handle wrap-around)
+                carousel.currentSlide = (index + carousel.slides.length) % carousel.slides.length;
+                
+                // Add active class to the current slide
+                carousel.slides[carousel.currentSlide].classList.add('active');
             }
-            
+
+            // Generic function to change slide for any carousel type
+            function changeSlideForCarousel(carouselType, direction) {
+                const carousel = carousels[carouselType];
+                if (!carousel) return;
+                
+                showSlideForCarousel(carouselType, carousel.currentSlide + direction);
+            }
+
+            // Wrapper functions for backwards compatibility with onclick handlers
             function changePosterSlide(direction) {
-                showPosterSlide(currentPosterSlide + direction);
+                changeSlideForCarousel('poster', direction);
             }
-            
-            // Auto-play poster carousel
-            setInterval(() => changePosterSlide(1), 4000);
 
-            // Illustration Carousel functionality
-            let currentIllustrationSlide = 0;
-            const illustrationSlides = document.querySelectorAll('.illustration-slide');
-            
-            function showIllustrationSlide(n) {
-                illustrationSlides.forEach(slide => slide.classList.remove('active'));
-                currentIllustrationSlide = (n + illustrationSlides.length) % illustrationSlides.length;
-                illustrationSlides[currentIllustrationSlide].classList.add('active');
-            }
-            
             function changeIllustrationSlide(direction) {
-                showIllustrationSlide(currentIllustrationSlide + direction);
+                changeSlideForCarousel('illustration', direction);
             }
-            
-            // Auto-play illustration carousel
-            setInterval(() => changeIllustrationSlide(1), 4000);
 
-            // Photography Carousel functionality
-            let currentPhotographySlide = 0;
-            const photographySlides = document.querySelectorAll('.photography-slide');
-            
-            function showPhotographySlide(n) {
-                photographySlides.forEach(slide => slide.classList.remove('active'));
-                currentPhotographySlide = (n + photographySlides.length) % photographySlides.length;
-                photographySlides[currentPhotographySlide].classList.add('active');
-            }
-            
             function changePhotographySlide(direction) {
-                showPhotographySlide(currentPhotographySlide + direction);
+                changeSlideForCarousel('photography', direction);
             }
-            
-            // Auto-play photography carousel
-            setInterval(() => changePhotographySlide(1), 4000);
+
+            // Auto-play for all carousels
+            function startAutoPlay(carouselType, interval = 4000) {
+                setInterval(() => changeSlideForCarousel(carouselType, 1), interval);
+            }
+
+            // Initialize auto-play for all carousels
+            startAutoPlay('poster', 4000);
+            startAutoPlay('illustration', 4000);
+            startAutoPlay('photography', 4000);
 
             // Image Zoom functionality with carousel navigation
-            let currentCarouselType = null; // 'photography', 'poster', or 'illustration'
+            let currentCarouselType = null;
             let currentZoomIndex = 0;
             let carouselImages = [];
+
+            // Universal carousel detection - automatically detects which carousel any image belongs to
+            function detectCarouselType(imageSrc) {
+                // Search through all carousels to find which one contains this image
+                for (const [carouselName, carousel] of Object.entries(carousels)) {
+                    const images = Array.from(carousel.slides).map(slide => {
+                        const img = slide.querySelector('img');
+                        return img ? img.src : null;
+                    }).filter(src => src !== null);
+                    
+                    // Found it! Return the carousel name
+                    if (images.includes(imageSrc)) {
+                        return carouselName;
+                    }
+                }
+                
+                // If not found in any carousel, return null
+                return null;
+            }
 
             function openImageZoom(imageSrc) {
                 const modal = document.getElementById('imageZoomModal');
                 const zoomedImage = document.getElementById('zoomedImage');
                 
                 // Determine which carousel this image belongs to
-                if (imageSrc.includes('photography')) {
-                    currentCarouselType = 'photography';
-                    carouselImages = Array.from(document.querySelectorAll('.photography-slide img')).map(img => img.src);
-                } else if (imageSrc.includes('poster')) {
-                    currentCarouselType = 'poster';
-                    carouselImages = Array.from(document.querySelectorAll('.poster-slide img')).map(img => img.src);
-                } else if (imageSrc.includes('illustration')) {
-                    currentCarouselType = 'illustration';
-                    carouselImages = Array.from(document.querySelectorAll('.illustration-slide img')).map(img => img.src);
+                currentCarouselType = detectCarouselType(imageSrc);
+                
+                // Get all images from the detected carousel type
+                if (currentCarouselType && carousels[currentCarouselType]) {
+                    carouselImages = Array.from(carousels[currentCarouselType].slides).map(slide => {
+                        const img = slide.querySelector('img');
+                        return img ? img.src : null;
+                    }).filter(src => src !== null);
                 }
                 
                 // Find current image index
