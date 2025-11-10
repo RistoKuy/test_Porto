@@ -39,7 +39,7 @@
                         <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</a>
                         <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">About Me</a>
                         <a href="#works" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Works</a>
-                        <div class="relative group">
+                        <!-- <div class="relative group">
                             <a href="#portfolio" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Portfolio</a>
                             <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                                 <div class="py-2">
@@ -48,7 +48,7 @@
                                     <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors">New Media</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contact Me</a>
                         
                         <!-- Link ke Falisha -->
@@ -79,7 +79,7 @@
                     <a href="#home" class="block py-3 text-base text-gray-700 hover:text-blue-600 border-b border-gray-100">Home</a>
                     <a href="#about" class="block py-3 text-base text-gray-700 hover:text-blue-600 border-b border-gray-100">About Me</a>
                     <a href="#works" class="block py-3 text-base text-gray-700 hover:text-blue-600 border-b border-gray-100">Works</a>
-                    <a href="#portfolio" class="block py-3 text-base text-gray-700 hover:text-blue-600 border-b border-gray-100">Portfolio</a>
+                    <!-- <a href="#portfolio" class="block py-3 text-base text-gray-700 hover:text-blue-600 border-b border-gray-100">Portfolio</a> -->
                     <a href="#contact" class="block py-3 text-base text-gray-700 hover:text-blue-600">Contact Me</a>
                     <!-- Mobile Social Icons -->
                     <div class="flex items-center justify-center space-x-6 pt-4 pb-2">
@@ -97,60 +97,30 @@
             </div>
         </nav>
 
-        <!-- Ganti jadi Foto2 Porto -->
         <!-- Hero Section -->
         <section id="home" class="relative h-screen overflow-hidden">
-            <div id="carousel" class="relative h-full">
-                <!-- Slide 1 -->
-                <div class="carousel-item absolute inset-0 opacity-100 transition-opacity duration-1000">
-                    <img src="img/banner.jpg" class="w-full h-full object-cover" alt="Portfolio Banner">
-                    <div class="absolute inset-0 bg-black/40"></div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="carousel-item absolute inset-0 opacity-0 transition-opacity duration-1000">
-                    <img src="img/banner1.jpg" class="w-full h-full object-cover" alt="Portfolio Banner">
-                    <div class="absolute inset-0 bg-black/40"></div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="carousel-item absolute inset-0 opacity-0 transition-opacity duration-1000">
-                    <img src="img/banner1b.jpg" class="w-full h-full object-cover" alt="Portfolio Banner">
-                    <div class="absolute inset-0 bg-black/40"></div>
-                </div>
-            </div>
+            <!-- Hero Image -->
+            <img src="img/hero.png" class="w-full h-full object-cover" alt="Portfolio Hero">
+            <div class="absolute inset-0 bg-black/40 md:bg-transparent"></div>
             
-            <!-- Hero Content -->
-            <div class="absolute inset-0 flex items-center justify-center text-center text-white z-10">
+            <!-- Hero Content - Only visible on mobile -->
+            <div class="md:hidden absolute inset-0 flex items-center justify-center text-center text-white z-10">
                 <div class="max-w-4xl px-4 sm:px-6">
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6" data-aos="fade-up">
+                    <h1 class="text-4xl sm:text-5xl font-bold mb-4 sm:mb-6" data-aos="fade-up">
                         Porto<span class="text-red-500">folio</span>
                     </h1>
-                    <p class="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-gray-200" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-lg sm:text-xl mb-6 sm:mb-8 text-gray-200" data-aos="fade-up" data-aos-delay="200">
                         Design & Digital Media
                     </p>
                     <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors">
-                            View Portfolio
-                        </button>
-                        <button class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors">
+                        <a href="#works" class="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors inline-block text-center">
+                            View Works
+                        </a>
+                        <a href="#contact" class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors">
                             Contact Me
-                        </button>
+                        </a>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Navigation Arrows -->
-            <button class="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-blue-400 transition-colors z-20" onclick="previousSlide()">
-                <i class="fas fa-chevron-left text-2xl sm:text-3xl"></i>
-            </button>
-            <button class="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-blue-400 transition-colors z-20" onclick="nextSlide()">
-                <i class="fas fa-chevron-right text-2xl sm:text-3xl"></i>
-            </button>
-            
-            <!-- Dots Indicator -->
-            <div class="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 sm:space-x-3 z-20">
-                <button class="w-2 h-2 sm:w-3 sm:h-3 bg-white rounded-full opacity-100 hover:opacity-100 transition-opacity" onclick="currentSlideSet(1)"></button>
-                <button class="w-2 h-2 sm:w-3 sm:h-3 bg-white rounded-full opacity-50 hover:opacity-100 transition-opacity" onclick="currentSlideSet(2)"></button>
-                <button class="w-2 h-2 sm:w-3 sm:h-3 bg-white rounded-full opacity-50 hover:opacity-100 transition-opacity" onclick="currentSlideSet(3)"></button>
             </div>
         </section>
 
@@ -262,130 +232,115 @@
         </section>
         
         <!-- Portofolio Section -->
-        <section id="works" class="py-12 sm:py-16 md:py-20 bg-gray-50">
-            <div class="container mx-auto px-4 sm:px-6">
-                <div class="text-center mb-10 sm:mb-12 md:mb-16">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4" data-aos="fade-right" data-aos-offset="200">
+        <section id="works" class="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-orange-100 to-red-100">
+            <div class="w-full">
+                <div class="text-center mb-10 sm:mb-12 md:mb-16 px-4 sm:px-6">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4" data-aos="fade-up">
                         My <span class="text-red-500">Works</span>
                     </h2>
                     <div class="w-20 sm:w-24 h-1 bg-red-500 mx-auto" data-aos="fade-left" data-aos-offset="300"></div>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                    <!-- Photography Work Card with Carousel -->
-                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                        <div class="relative h-48 sm:h-56 md:h-64">
-                            <!-- Carousel Container -->
-                            <div class="photography-carousel h-full">
-                                <div class="photography-slide active">
-                                    <img src="img/photography1.jpg" alt="Portrait Photography" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                                        <p class="text-white font-semibold">Portrait Photography</p>
+                <div class="w-full space-y-0">
+                    <!-- Portfolio Item 1 - Photography -->
+                    <div class="bg-white overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative overflow-hidden">
+                            <!-- Photography Carousel -->
+                            <div class="relative h-[50vh] sm:h-[60vh] md:h-[70vh]">
+                                <div class="photography-carousel h-full">
+                                    <div class="photography-slide active">
+                                        <img src="img/photography1.jpg" alt="Portrait Photography" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                    <div class="photography-slide">
+                                        <img src="img/photography1.jpg" alt="Event Photography" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                    <div class="photography-slide">
+                                        <img src="img/photography1.jpg" alt="Commercial Photography" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
                                     </div>
                                 </div>
-                                <div class="photography-slide">
-                                    <img src="img/photography1.jpg" alt="Event Photography" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                                        <p class="text-white font-semibold">Event Photography</p>
-                                    </div>
-                                </div>
-                                <div class="photography-slide">
-                                    <img src="img/photography1.jpg" alt="Commercial Photography" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                                        <p class="text-white font-semibold">Commercial Photography</p>
-                                    </div>
-                                </div>
+                                <!-- Carousel Controls -->
+                                <button onclick="changePhotographySlide(-1)" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
+                                    <i class="fas fa-chevron-left text-2xl sm:text-3xl md:text-4xl"></i>
+                                </button>
+                                <button onclick="changePhotographySlide(1)" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
+                                    <i class="fas fa-chevron-right text-2xl sm:text-3xl md:text-4xl"></i>
+                                </button>
                             </div>
-                            <!-- Carousel Controls -->
-                            <button onclick="changePhotographySlide(-1)" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg">
-                                <i class="fas fa-chevron-left text-2xl sm:text-3xl"></i>
-                            </button>
-                            <button onclick="changePhotographySlide(1)" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg">
-                                <i class="fas fa-chevron-right text-2xl sm:text-3xl"></i>
-                            </button>
-                        </div>
-                        <div class="p-4 sm:p-6 text-center">
-                            <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">Photography</h3>
-                            <p class="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">Portrait, Event & Commercial Photography</p>
-                            <button onclick="openModal('photographyModal')" class="bg-blue-600 hover:bg-blue-700 text-white px-5 sm:px-6 py-2 rounded-lg text-sm sm:text-base font-semibold transition-colors">
-                                See More
-                            </button>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col items-center justify-end pb-8 sm:pb-12 md:pb-16 pointer-events-none">
+                                <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3">Photography</h3>
+                                <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6">Portrait, Event & Commercial Photography</p>
+                                <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
+                                    <span class="bg-blue-600 text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium">Photography</span>
+                                </div>
+                                <button onclick="openModal('photographyModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors pointer-events-auto">Info</button>
+                            </div>
                         </div>
                     </div>
                     
-                    <!-- Design Works Card with Carousel -->
-                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                        <div class="relative h-48 sm:h-56 md:h-64">
-                            <!-- Carousel Container -->
-                            <div class="poster-carousel h-full">
-                                <div class="poster-slide active">
-                                    <img src="img/poster1.png" alt="Poster Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                                        <p class="text-white font-semibold">Poster Design</p>
+                    <!-- Portfolio Item 2 - Design Works -->
+                    <div class="bg-white overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative overflow-hidden">
+                            <!-- Design Carousel -->
+                            <div class="relative h-[50vh] sm:h-[60vh] md:h-[70vh]">
+                                <div class="poster-carousel h-full">
+                                    <div class="poster-slide active">
+                                        <img src="img/poster1.png" alt="Poster Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                    <div class="poster-slide">
+                                        <img src="img/package1.png" alt="Packaging Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                    <div class="poster-slide">
+                                        <img src="img/booklet1.png" alt="Booklet Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
                                     </div>
                                 </div>
-                                <div class="poster-slide">
-                                    <img src="img/package1.png" alt="Packaging Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                                        <p class="text-white font-semibold">Packaging Design</p>
-                                    </div>
-                                </div>
-                                <div class="poster-slide">
-                                    <img src="img/booklet1.png" alt="Booklet Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                                        <p class="text-white font-semibold">Booklet Design</p>
-                                    </div>
-                                </div>
+                                <!-- Carousel Controls -->
+                                <button onclick="changePosterSlide(-1)" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
+                                    <i class="fas fa-chevron-left text-2xl sm:text-3xl md:text-4xl"></i>
+                                </button>
+                                <button onclick="changePosterSlide(1)" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
+                                    <i class="fas fa-chevron-right text-2xl sm:text-3xl md:text-4xl"></i>
+                                </button>
                             </div>
-                            <!-- Carousel Controls -->
-                            <button onclick="changePosterSlide(-1)" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg">
-                                <i class="fas fa-chevron-left text-2xl sm:text-3xl"></i>
-                            </button>
-                            <button onclick="changePosterSlide(1)" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg">
-                                <i class="fas fa-chevron-right text-2xl sm:text-3xl"></i>
-                            </button>
-                        </div>
-                        <div class="p-4 sm:p-6 text-center">
-                            <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">Design Works</h3>
-                            <p class="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">Poster, Packaging & Booklet Design</p>
-                            <button onclick="openModal('designModal')" class="bg-purple-600 hover:bg-purple-700 text-white px-5 sm:px-6 py-2 rounded-lg text-sm sm:text-base font-semibold transition-colors">
-                                See More
-                            </button>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col items-center justify-end pb-8 sm:pb-12 md:pb-16 pointer-events-none">
+                                <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3">Design Works</h3>
+                                <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6">Poster, Packaging & Booklet Design</p>
+                                <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
+                                    <span class="bg-purple-600 text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium">Design</span>
+                                </div>
+                                <button onclick="openModal('designModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors pointer-events-auto">Info</button>
+                            </div>
                         </div>
                     </div>
                     
-                    <!-- Illustration Work Card with Carousel -->
-                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-                        <div class="relative h-48 sm:h-56 md:h-64">
-                            <!-- Carousel Container -->
-                            <div class="illustration-carousel h-full">
-                                <div class="illustration-slide active">
-                                    <img src="img/illust1.png" alt="Personal Illustration" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                                        <p class="text-white font-semibold">Personal Illustration</p>
+                    <!-- Portfolio Item 3 - Illustration Works -->
+                    <div class="bg-white overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative overflow-hidden">
+                            <!-- Illustration Carousel -->
+                            <div class="relative h-[50vh] sm:h-[60vh] md:h-[70vh]">
+                                <div class="illustration-carousel h-full">
+                                    <div class="illustration-slide active">
+                                        <img src="img/illust1.png" alt="Personal Illustration" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                    <div class="illustration-slide">
+                                        <img src="img/chara1.png" alt="Character Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
                                     </div>
                                 </div>
-                                <div class="illustration-slide">
-                                    <img src="img/chara1.png" alt="Character Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
-                                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                                        <p class="text-white font-semibold">Character Design</p>
-                                    </div>
-                                </div>
+                                <!-- Carousel Controls -->
+                                <button onclick="changeIllustrationSlide(-1)" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
+                                    <i class="fas fa-chevron-left text-2xl sm:text-3xl md:text-4xl"></i>
+                                </button>
+                                <button onclick="changeIllustrationSlide(1)" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
+                                    <i class="fas fa-chevron-right text-2xl sm:text-3xl md:text-4xl"></i>
+                                </button>
                             </div>
-                            <!-- Carousel Controls -->
-                            <button onclick="changeIllustrationSlide(-1)" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg">
-                                <i class="fas fa-chevron-left text-2xl sm:text-3xl"></i>
-                            </button>
-                            <button onclick="changeIllustrationSlide(1)" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg">
-                                <i class="fas fa-chevron-right text-2xl sm:text-3xl"></i>
-                            </button>
-                        </div>
-                        <div class="p-4 sm:p-6 text-center">
-                            <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2">Illustration Works</h3>
-                            <p class="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">Personal Illustration & Character Design</p>
-                            <button onclick="openModal('illustrationModal')" class="bg-red-600 hover:bg-red-700 text-white px-5 sm:px-6 py-2 rounded-lg text-sm sm:text-base font-semibold transition-colors">
-                                See More
-                            </button>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col items-center justify-end pb-8 sm:pb-12 md:pb-16 pointer-events-none">
+                                <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3">Illustration Works</h3>
+                                <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6">Personal Illustration & Character Design</p>
+                                <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
+                                    <span class="bg-red-600 text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium">Illustration</span>
+                                </div>
+                                <button onclick="openModal('illustrationModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors pointer-events-auto">Info</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -411,120 +366,6 @@
                         transition: opacity 0.2s ease-in-out;
                     }
                 </style>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="py-20 bg-gradient-to-br from-orange-100 to-red-100">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <div class="relative inline-block mb-8" data-aos="zoom-in">
-                        <img src="img/pexels.jpg" 
-                             alt="Portfolio" 
-                             class="w-full max-w-2xl h-auto object-cover rounded-lg shadow-2xl" 
-                             data-node-id="2:14451">
-                    </div>
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4" data-aos="fade-up">
-                        My Creative <span class="text-red-500">Works</span>
-                    </h2>
-                    <div class="w-24 h-1 bg-red-500 mx-auto" data-aos="fade-left" data-aos-offset="300"></div>
-                </div>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Portfolio Item 1 -->
-                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
-                        <div class="relative overflow-hidden">
-                            <img src="img/banner.jpg" alt="Photography Project" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
-                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <button class="bg-white text-gray-800 px-6 py-2 rounded-lg font-semibold">View Project</button>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Photography Portfolio</h3>
-                            <p class="text-gray-600 mb-4">Professional portrait and event photography</p>
-                            <span class="inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">Photography</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Portfolio Item 2 -->
-                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
-                        <div class="relative overflow-hidden">
-                            <img src="img/banner1.jpg" alt="Design Project" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
-                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <button class="bg-white text-gray-800 px-6 py-2 rounded-lg font-semibold">View Project</button>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Visual Design</h3>
-                            <p class="text-gray-600 mb-4">Brand identity and visual communication</p>
-                            <span class="inline-block bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Design</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Portfolio Item 3 -->
-                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
-                        <div class="relative overflow-hidden">
-                            <img src="img/banner1b.jpg" alt="Animation Project" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
-                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <button class="bg-white text-gray-800 px-6 py-2 rounded-lg font-semibold">View Project</button>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-2">Motion Graphics</h3>
-                            <p class="text-gray-600 mb-4">Animation and video production</p>
-                            <span class="inline-block bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full">Animation</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Hapus -->
-        <!-- Teams Section -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our <span class="text-red-500">Team</span></h2>
-                    <div class="w-24 h-1 bg-red-500 mx-auto"></div>
-                </div>
-                
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 text-center group" data-aos="fade-up" data-aos-delay="100">
-                        <div class="relative mb-6">
-                            <img src="img/team1.jpg" alt="John" class="w-32 h-32 object-cover rounded-full mx-auto border-4 border-blue-600 group-hover:border-blue-700 transition-colors">
-                            <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-2 border-white"></div>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">John</h3>
-                        <p class="text-gray-600 mb-6">Professional Photographer</p>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
-                            Read more
-                        </button>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 text-center group" data-aos="fade-up" data-aos-delay="200">
-                        <div class="relative mb-6">
-                            <img src="img/team2.jpg" alt="Sarah" class="w-32 h-32 object-cover rounded-full mx-auto border-4 border-blue-600 group-hover:border-blue-700 transition-colors">
-                            <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-2 border-white"></div>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Sarah</h3>
-                        <p class="text-gray-600 mb-6">Project Manager/Designer</p>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
-                            Read more
-                        </button>
-                    </div>
-                    
-                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 text-center group" data-aos="fade-up" data-aos-delay="300">
-                        <div class="relative mb-6">
-                            <img src="img/team3.jpg" alt="Kevin" class="w-32 h-32 object-cover rounded-full mx-auto border-4 border-blue-600 group-hover:border-blue-700 transition-colors">
-                            <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-2 border-white"></div>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Kevin</h3>
-                        <p class="text-gray-600 mb-6">Graphic Designer</p>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
-                            Read more
-                        </button>
-                    </div>
-                </div>
             </div>
         </section>
         
