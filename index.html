@@ -162,9 +162,9 @@
                             With a strong focus on composition, color psychology, and visual storytelling, I aim to craft designs that not only captivate the eye but also communicate meaning effectively. I see design as a problem-solving discipline, where each project is an opportunity to balance aesthetics, functionality, and emotion.
                             Whether developing illustrations, brand visuals, or digital art, I’m driven by the challenge of translating ideas into visuals that inspire, engage, and leave a lasting impression.
                         </p>
-                        <!-- <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors mb-8">
-                            More About Me
-                        </button> -->
+                        <a href="https://www.linkedin.com/in/falisha-aulia-204039385/" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors mb-8">
+                            LinkedIn Profile
+                        </a>
                         
                         <!-- Accordion -->
                         <div class="space-y-4">
@@ -178,7 +178,7 @@
                                         </div>
                                         <!-- Experience Info -->
                                         <div class="flex-1">
-                                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Desainer Grafis</h3>
+                                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Graphic Designer</h3>
                                             <p class="text-gray-700 font-medium mb-1">Citizen OS Foundation · Internship</p>
                                             <p class="text-sm text-gray-600 mb-1">Aug 2025 - Present · 4 mos</p>
                                             <p class="text-sm text-gray-600">Jakarta Metropolitan Area · Remote</p>
@@ -412,6 +412,11 @@
                     
                     .poster-slide.active, .illustration-slide.active, .photography-slide.active {
                         opacity: 1;
+                    }
+                    
+                    /* Smooth transition for zoomed image */
+                    #zoomedImage {
+                        transition: opacity 0.2s ease-in-out;
                     }
                 </style>
             </div>
@@ -909,12 +914,28 @@
         </div>
 
         <!-- Image Zoom Modal -->
-        <div id="imageZoomModal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4" onclick="closeImageZoom()">
-            <div class="relative max-w-7xl max-h-full">
+        <div id="imageZoomModal" class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden flex items-center justify-center p-4" onclick="closeImageZoom()">
+            <!-- Previous Button - Outside Image -->
+            <button onclick="changeZoomedImage(-1); event.stopPropagation();" class="absolute left-8 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/50 text-white rounded-full p-4 transition-all backdrop-blur-sm z-10 shadow-xl">
+                <i class="fas fa-chevron-left text-2xl"></i>
+            </button>
+            
+            <!-- Next Button - Outside Image -->
+            <button onclick="changeZoomedImage(1); event.stopPropagation();" class="absolute right-8 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/50 text-white rounded-full p-4 transition-all backdrop-blur-sm z-10 shadow-xl">
+                <i class="fas fa-chevron-right text-2xl"></i>
+            </button>
+            
+            <div class="relative max-w-7xl max-h-full" onclick="event.stopPropagation()">
                 <button onclick="closeImageZoom()" class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors">
                     <i class="fas fa-times text-3xl"></i>
                 </button>
-                <img id="zoomedImage" src="" alt="Zoomed Image" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl">
+                
+                <img id="zoomedImage" src="" alt="Zoomed Image" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl" onclick="event.stopPropagation()">
+                
+                <!-- Image Counter -->
+                <div class="absolute -bottom-12 left-1/2 -translate-x-1/2 bg-black/60 text-white px-4 py-2 rounded-full text-sm backdrop-blur-sm">
+                    <span id="imageCounter">1 / 1</span>
+                </div>
             </div>
         </div>
 
@@ -1124,17 +1145,64 @@
             // Auto-play photography carousel
             setInterval(() => changePhotographySlide(1), 4000);
 
-            // Image Zoom functionality
+            // Image Zoom functionality with carousel navigation
+            let currentCarouselType = null; // 'photography', 'poster', or 'illustration'
+            let currentZoomIndex = 0;
+            let carouselImages = [];
+
             function openImageZoom(imageSrc) {
                 const modal = document.getElementById('imageZoomModal');
                 const zoomedImage = document.getElementById('zoomedImage');
+                
+                // Determine which carousel this image belongs to
+                if (imageSrc.includes('photography')) {
+                    currentCarouselType = 'photography';
+                    carouselImages = Array.from(document.querySelectorAll('.photography-slide img')).map(img => img.src);
+                } else if (imageSrc.includes('poster')) {
+                    currentCarouselType = 'poster';
+                    carouselImages = Array.from(document.querySelectorAll('.poster-slide img')).map(img => img.src);
+                } else if (imageSrc.includes('illustration')) {
+                    currentCarouselType = 'illustration';
+                    carouselImages = Array.from(document.querySelectorAll('.illustration-slide img')).map(img => img.src);
+                }
+                
+                // Find current image index
+                currentZoomIndex = carouselImages.indexOf(imageSrc);
+                if (currentZoomIndex === -1) currentZoomIndex = 0;
+                
                 if (modal && zoomedImage) {
                     zoomedImage.src = imageSrc;
+                    updateImageCounter();
                     modal.classList.remove('hidden');
                     document.body.style.overflow = 'hidden';
                 }
+                
                 // Prevent event bubbling
                 event.stopPropagation();
+            }
+
+            function changeZoomedImage(direction) {
+                if (carouselImages.length === 0) return;
+                
+                currentZoomIndex = (currentZoomIndex + direction + carouselImages.length) % carouselImages.length;
+                const zoomedImage = document.getElementById('zoomedImage');
+                
+                if (zoomedImage) {
+                    // Fade effect
+                    zoomedImage.style.opacity = '0.5';
+                    setTimeout(() => {
+                        zoomedImage.src = carouselImages[currentZoomIndex];
+                        zoomedImage.style.opacity = '1';
+                        updateImageCounter();
+                    }, 150);
+                }
+            }
+
+            function updateImageCounter() {
+                const counter = document.getElementById('imageCounter');
+                if (counter) {
+                    counter.textContent = `${currentZoomIndex + 1} / ${carouselImages.length}`;
+                }
             }
 
             function closeImageZoom() {
@@ -1142,6 +1210,8 @@
                 if (modal) {
                     modal.classList.add('hidden');
                     document.body.style.overflow = 'auto';
+                    currentCarouselType = null;
+                    carouselImages = [];
                 }
             }
 
@@ -1149,6 +1219,10 @@
             document.addEventListener('keydown', function(event) {
                 if (event.key === 'Escape') {
                     closeImageZoom();
+                } else if (event.key === 'ArrowLeft') {
+                    changeZoomedImage(-1);
+                } else if (event.key === 'ArrowRight') {
+                    changeZoomedImage(1);
                 }
             });
         </script>
