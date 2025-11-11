@@ -7,6 +7,9 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
         <script>
             tailwind.config = {
                 theme: {
@@ -19,6 +22,13 @@
                 }
             }
         </script>
+        <style>
+            .notable-regular {
+                font-family: "Notable", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+        </style>
     </head>
     <body class="bg-gray-50">
         <!-- Navigation -->
@@ -38,7 +48,7 @@
                     <div class="hidden md:flex items-center space-x-8">
                         <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</a>
                         <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">About Me</a>
-                        <a href="#works" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Works</a>
+                        <a href="#portofolio" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Works</a>
                         <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contact Me</a>
                     </div>
                     
@@ -54,7 +64,7 @@
                 <div class="px-4 py-3 space-y-1">
                     <a href="#home" class="block py-3 text-base text-gray-700 hover:text-blue-600 border-b border-gray-100">Home</a>
                     <a href="#about" class="block py-3 text-base text-gray-700 hover:text-blue-600 border-b border-gray-100">About Me</a>
-                    <a href="#works" class="block py-3 text-base text-gray-700 hover:text-blue-600 border-b border-gray-100">Works</a>
+                    <a href="#portofolio" class="block py-3 text-base text-gray-700 hover:text-blue-600 border-b border-gray-100">Works</a>
                     <a href="#contact" class="block py-3 text-base text-gray-700 hover:text-blue-600">Contact Me</a>
                 </div>
             </div>
@@ -69,14 +79,14 @@
             <!-- Hero Content - Only visible on mobile -->
             <div class="md:hidden absolute inset-0 flex items-center justify-center text-center text-white z-10">
                 <div class="max-w-4xl px-4 sm:px-6">
-                    <h1 class="text-4xl sm:text-5xl font-bold mb-4 sm:mb-6" data-aos="fade-up">
+                    <h1 class="notable-regular text-4xl sm:text-5xl font-bold mb-4 sm:mb-6" data-aos="fade-up">
                         Porto<span class="text-red-500">folio</span>
                     </h1>
                     <p class="text-lg sm:text-xl mb-6 sm:mb-8 text-gray-200" data-aos="fade-up" data-aos-delay="200">
                         Design & Digital Media
                     </p>
                     <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
-                        <a href="#works" class="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors inline-block text-center">
+                        <a href="#portofolio" class="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors inline-block text-center">
                             View Works
                         </a>
                         <a href="#contact" class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors">
@@ -91,7 +101,7 @@
         <section id="about" class="py-12 sm:py-16 md:py-20 bg-white">
             <div class="container mx-auto px-4 sm:px-6">
                 <div class="text-center mb-10 sm:mb-12 md:mb-16">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4" data-aos="fade-right" data-aos-offset="200">
+                    <h2 class="notable-regular text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4" data-aos="fade-right" data-aos-offset="200">
                         About <span class="text-red-500">Me</span>
                     </h2>
                     <div class="w-20 sm:w-24 h-1 bg-red-500 mx-auto" data-aos="fade-left" data-aos-offset="200"></div>
@@ -195,10 +205,10 @@
         </section>
         
         <!-- Portofolio Section -->
-        <section id="works" class="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-orange-100 to-red-100">
+        <section id="portofolio" class="py-12 sm:py-16 md:py-20 bg-white">
             <div class="w-full">
                 <div class="text-center mb-10 sm:mb-12 md:mb-16 px-4 sm:px-6">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4" data-aos="fade-up">
+                    <h2 class="notable-regular text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4" data-aos="fade-up">
                         My <span class="text-red-500">Works</span>
                     </h2>
                     <div class="w-20 sm:w-24 h-1 bg-red-500 mx-auto" data-aos="fade-left" data-aos-offset="300"></div>
@@ -336,10 +346,10 @@
         </section>
     
         <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-gray-50">
+        <section id="contact" class="py-12 sm:py-16 md:py-20 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Feel free <span class="text-red-500">To Connect Me</span></h2>
+                    <h2 class="notable-regular text-4xl md:text-5xl font-bold text-gray-800 mb-4">Feel free <span class="text-red-500">To Connect Me</span></h2>
                     <div class="w-24 h-1 bg-red-500 mx-auto"></div>
                 </div>
                 
@@ -441,7 +451,7 @@
         <div id="illustrationModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
             <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
                 <!-- Modal Header -->
-                <div class="sticky top-0 bg-gradient-to-r from-purple-600 to-purple-700 text-white p-6 rounded-t-2xl">
+                <div class="sticky top-0 bg-gradient-to-r from-red-600 to-red-700 text-white p-6 rounded-t-2xl">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
@@ -503,107 +513,6 @@
             </div>
         </div>
 
-        <!-- Animation Modal -->
-        <div id="animationModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
-            <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
-                <!-- Modal Header -->
-                <div class="sticky top-0 bg-gradient-to-r from-red-600 to-red-700 text-white p-6 rounded-t-2xl">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                                <i class="fas fa-film text-2xl"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold">Animation Services</h3>
-                        </div>
-                        <button onclick="closeModal('animationModal')" class="text-white hover:bg-white/20 rounded-full p-2 transition-colors">
-                            <i class="fas fa-times text-xl"></i>
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Modal Content -->
-                <div class="p-6">
-                    <!-- Hero Image -->
-                    <div class="mb-6 rounded-lg overflow-hidden">
-                        <img src="img/banner1b.jpg" alt="Animation" class="w-full h-64 object-cover">
-                    </div>
-                    
-                    <!-- Description -->
-                    <div class="mb-6">
-                        <h4 class="text-xl font-bold text-gray-800 mb-3">Motion Graphics & Animation</h4>
-                        <p class="text-gray-700 leading-relaxed mb-4">
-                            Bringing stories to life through dynamic motion graphics and engaging animations. I create compelling animated content that captures attention, conveys messages effectively, and leaves a lasting impression on your audience.
-                        </p>
-                    </div>
-                    
-                    <!-- Services List -->
-                    <div class="mb-6">
-                        <h4 class="text-lg font-bold text-gray-800 mb-3">What I Offer:</h4>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
-                                <div>
-                                    <strong class="text-gray-800">2D Animation</strong>
-                                    <p class="text-gray-600">Character animation, explainer videos, and animated storytelling</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
-                                <div>
-                                    <strong class="text-gray-800">Motion Graphics</strong>
-                                    <p class="text-gray-600">Logo animations, kinetic typography, and dynamic visual effects</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
-                                <div>
-                                    <strong class="text-gray-800">Video Production</strong>
-                                    <p class="text-gray-600">Marketing videos, educational content, and social media animations</p>
-                                </div>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
-                                <div>
-                                    <strong class="text-gray-800">Post-Production</strong>
-                                    <p class="text-gray-600">Video editing, color grading, and visual effects integration</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Features -->
-                    <div class="bg-red-50 rounded-lg p-4 mb-6">
-                        <h4 class="text-lg font-bold text-gray-800 mb-3">Why Choose My Services:</h4>
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-video text-red-600"></i>
-                                <span class="text-gray-700">Smooth Animation</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-magic text-red-600"></i>
-                                <span class="text-gray-700">Creative Effects</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-bullseye text-red-600"></i>
-                                <span class="text-gray-700">Engaging Content</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-thumbs-up text-red-600"></i>
-                                <span class="text-gray-700">Client Satisfaction</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- CTA Button -->
-                    <div class="text-center">
-                        <a href="#contact" onclick="closeModal('animationModal')" class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                            Get in Touch
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Photography Modal -->
         <div id="photographyModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
             <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
@@ -624,11 +533,6 @@
                 
                 <!-- Modal Content -->
                 <div class="p-6">
-                    <!-- Hero Image -->
-                    <div class="mb-6 rounded-lg overflow-hidden">
-                        <img src="img/banner.jpg" alt="Photography" class="w-full h-64 object-cover">
-                    </div>
-                    
                     <!-- Description -->
                     <div class="mb-6">
                         <h4 class="text-xl font-bold text-gray-800 mb-3">Professional Photography</h4>
@@ -670,29 +574,6 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>
-                    
-                    <!-- Features -->
-                    <div class="bg-blue-50 rounded-lg p-4 mb-6">
-                        <h4 class="text-lg font-bold text-gray-800 mb-3">Why Choose My Services:</h4>
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-star text-blue-600"></i>
-                                <span class="text-gray-700">High-Quality Output</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-clock text-blue-600"></i>
-                                <span class="text-gray-700">Timely Delivery</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-palette text-blue-600"></i>
-                                <span class="text-gray-700">Creative Vision</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-user-check text-blue-600"></i>
-                                <span class="text-gray-700">Professional Service</span>
-                            </div>
-                        </div>
                     </div>
                     
                     <!-- CTA Button -->
