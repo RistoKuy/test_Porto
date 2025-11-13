@@ -40,7 +40,7 @@
                         <!-- Custom Logo -->
                         <img src="img/hero_icon.png" alt="Logo" class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full">
                         <span class="text-sm sm:text-base md:text-xl font-semibold text-gray-800">
-                            Portofolio by <span class="text-red-500">Falisha Aulia</span>
+                            Portofolio by <span style="color: #B25505;">Falisha Aulia</span>
                         </span>
                     </a>
                     
@@ -80,7 +80,7 @@
             <div class="md:hidden absolute inset-0 flex items-center justify-center text-center text-white z-10">
                 <div class="max-w-4xl px-4 sm:px-6">
                     <h1 class="notable-regular text-4xl sm:text-5xl font-bold mb-4 sm:mb-6" data-aos="fade-up">
-                        Porto<span class="text-red-500">folio</span>
+                        Porto<span style="color: #B25505;">folio</span>
                     </h1>
                     <p class="text-lg sm:text-xl mb-6 sm:mb-8 text-gray-200" data-aos="fade-up" data-aos-delay="200">
                         Design & Digital Media
@@ -98,13 +98,16 @@
         </section>
 
         <!-- About Me Section -->
-        <section id="about" class="py-12 sm:py-16 md:py-20 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="about" class="py-12 sm:py-16 md:py-20 bg-white bg-cover bg-center bg-no-repeat relative" style="background-image: url('img/about_bg.png');">
+            <!-- Semi-transparent white overlay - Only visible on mobile -->
+            <div class="md:hidden absolute inset-0 bg-white/80"></div>
+            
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center mb-10 sm:mb-12 md:mb-16">
                     <h2 class="notable-regular text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4" data-aos="fade-right" data-aos-offset="200">
-                        About <span class="text-red-500">Me</span>
+                        About <span style="color: #B25505;">Me</span>
                     </h2>
-                    <div class="w-20 sm:w-24 h-1 bg-red-500 mx-auto" data-aos="fade-left" data-aos-offset="200"></div>
+                    <div class="w-20 sm:w-24 h-1 mx-auto" style="background-color: #B25505;" data-aos="fade-left" data-aos-offset="200"></div>
                 </div>
                 
                 <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -112,17 +115,17 @@
                         <!-- Profile Picture - Mobile Only -->
                         <div class="text-center mb-6 sm:mb-8 md:hidden">
                             <div class="relative inline-block">
-                                <img src="img/falisha_pp.jpg" alt="Profile Picture" class="w-48 h-48 sm:w-64 sm:h-64 object-cover rounded-full shadow-2xl border-4 sm:border-8 border-white" data-aos="zoom-in" data-aos-offset="200"/>
+                                <img src="img/falisha_pp.jpg" alt="Profile Picture" class="w-full max-w-sm sm:max-w-md object-cover shadow-2xl" data-aos="zoom-in" data-aos-offset="200"/>
                             </div>
                         </div>
                         
                         <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6" data-aos="zoom-in-right" data-aos-offset="200">
                             What do you want to know?
                         </h3>
-                        <p class="text-sm sm:text-base md:text-lg text-gray-600 mb-6 sm:mb-8 text-justify leading-relaxed" data-aos="zoom-out-right" data-aos-offset="200">
-                            I’m Falisha, a visual designer and illustrator based in Indonesia, specializing in semi-realistic illustration and expressive, story-driven design. My work blends creativity with strategy—transforming visual concepts into compelling narratives that connect emotionally while serving a clear purpose.
+                        <p class="text-sm sm:text-base md:text-lg text-gray-600 mb-6 sm:mb-8 text-justify leading-relaxed font-bold" data-aos="zoom-out-right" data-aos-offset="200">
+                            I'm Falisha, a visual designer and illustrator based in Indonesia, specializing in semi-realistic illustration and expressive, story-driven design. My work blends creativity with strategy—transforming visual concepts into compelling narratives that connect emotionally while serving a clear purpose.
                             With a strong focus on composition, color psychology, and visual storytelling, I aim to craft designs that not only captivate the eye but also communicate meaning effectively. I see design as a problem-solving discipline, where each project is an opportunity to balance aesthetics, functionality, and emotion.
-                            Whether developing illustrations, brand visuals, or digital art, I’m driven by the challenge of translating ideas into visuals that inspire, engage, and leave a lasting impression.
+                            Whether developing illustrations, brand visuals, or digital art, I'm driven by the challenge of translating ideas into visuals that inspire, engage, and leave a lasting impression.
                         </p>
                         
                         <!-- Accordion -->
@@ -158,6 +161,38 @@
                                             <span class="px-2.5 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full font-medium">Graphic Design</span>
                                             <span class="px-2.5 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full font-medium">Visual Communication</span>
                                             <span class="px-2.5 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full font-medium">Adobe Creative Suite</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                <button class="accordion-btn w-full text-left p-4 sm:p-6 hover:bg-gray-50 transition-colors flex justify-between items-start gap-3 sm:gap-4" data-target="experience2">
+                                    <div class="flex gap-3 sm:gap-4 flex-1">
+                                        <!-- Company Logo -->
+                                        <div class="flex-shrink-0">
+                                            <img src="img/klifonara_logo.jpg" alt="Klifonara" class="w-10 h-10 sm:w-12 sm:h-12 object-cover rounded">
+                                        </div>
+                                        <!-- Experience Info -->
+                                        <div class="flex-1">
+                                            <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-1">Secretary</h3>
+                                            <p class="text-sm sm:text-base text-gray-700 font-medium mb-1">Klifonara · Student Organization</p>
+                                            <p class="text-xs sm:text-sm text-gray-600 mb-1">Oct 2023 - Present</p>
+                                            <p class="text-xs sm:text-sm text-gray-600">Jakarta Metropolitan Area</p>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-chevron-down transform transition-transform text-gray-500 mt-1"></i>
+                                </button>
+                                <div id="experience2" class="accordion-content hidden px-4 sm:px-6 pb-4 sm:pb-6 pt-2">
+                                    <div class="pl-0 sm:pl-16">
+                                        <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
+                                            General Secretary of Klub Fotografi Bina Nusantara
+                                        </p>
+                                        <!-- Skills Tags -->
+                                        <div class="flex flex-wrap gap-2 mt-4">
+                                            <span class="px-2.5 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full font-medium">Teamwork</span>
+                                            <span class="px-2.5 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full font-medium">Leadership</span>
+                                            <span class="px-2.5 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full font-medium">Documentation & Archiving</span>
                                         </div>
                                     </div>
                                 </div>
@@ -208,7 +243,7 @@
                     <!-- Profile Picture - Desktop Only -->
                     <div class="text-center hidden md:block">
                         <div class="relative inline-block">
-                            <img src="img/falisha_pp.jpg" alt="Profile Picture" class="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-cover rounded-full shadow-2xl border-4 sm:border-8 border-white" data-aos="zoom-in" data-aos-offset="200"/>
+                            <img src="img/falisha_pp.jpg" alt="Profile Picture" class="w-full max-w-md object-cover shadow-2xl" data-aos="zoom-in" data-aos-offset="200"/>
                         </div>
                     </div>
                 </div>
@@ -220,9 +255,9 @@
             <div class="w-full">
                 <div class="text-center mb-10 sm:mb-12 md:mb-16 px-4 sm:px-6">
                     <h2 class="notable-regular text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4" data-aos="fade-up">
-                        My <span class="text-red-500">Works</span>
+                        My <span style="color: #B25505;">Works</span>
                     </h2>
-                    <div class="w-20 sm:w-24 h-1 bg-red-500 mx-auto" data-aos="fade-left" data-aos-offset="300"></div>
+                    <div class="w-20 sm:w-24 h-1 mx-auto" style="background-color: #B25505;" data-aos="fade-left" data-aos-offset="300"></div>
                 </div>
                     
                     <!-- Portfolio Item 2 - Design Works -->
@@ -256,7 +291,7 @@
                                 <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3">Design Works</h3>
                                 <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6">Poster, Packaging & Booklet Design</p>
                                 <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
-                                    <span class="bg-red-600 text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium">Design</span>
+                                    <span class="text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium" style="background-color: #B25505;">Design</span>
                                 </div>
                                 <button onclick="openModal('designModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors pointer-events-auto">Info</button>
                             </div>
@@ -294,7 +329,7 @@
                                 <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3">Illustration Works</h3>
                                 <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6">Personal Illustration & Character Design</p>
                                 <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
-                                    <span class="bg-red-600 text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium">Illustration</span>
+                                    <span class="text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium" style="background-color: #B25505;">Illustration</span>
                                 </div>
                                 <button onclick="openModal('illustrationModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors pointer-events-auto">Info</button>
                             </div>
@@ -334,7 +369,7 @@
                                 <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3">Photography</h3>
                                 <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6">Portrait, Event & Commercial Photography</p>
                                 <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
-                                    <span class="bg-red-600 text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium">Photography</span>
+                                    <span class="text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium" style="background-color: #B25505;">Photography</span>
                                 </div>
                                 <button onclick="openModal('photographyModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors pointer-events-auto">Info</button>
                             </div>
@@ -369,8 +404,8 @@
         <section id="contact" class="py-12 sm:py-16 md:py-20 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
-                    <h2 class="notable-regular text-4xl md:text-5xl font-bold text-gray-800 mb-4">Feel free <span class="text-red-500">To Connect Me</span></h2>
-                    <div class="w-24 h-1 bg-red-500 mx-auto"></div>
+                    <h2 class="notable-regular text-4xl md:text-5xl font-bold text-gray-800 mb-4">Feel free <span style="color: #B25505;">To Connect Me</span></h2>
+                    <div class="w-24 h-1 mx-auto" style="background-color: #B25505;"></div>
                 </div>
                 
                 <div class="max-w-2xl mx-auto">
@@ -405,7 +440,7 @@
         <div id="designModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
             <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
                 <!-- Modal Header -->
-                <div class="sticky top-0 bg-gradient-to-r from-red-600 to-red-700 text-white p-6 rounded-t-2xl">
+                <div class="sticky top-0 text-white p-6 rounded-t-2xl" style="background: linear-gradient(to right, #B25505, #8B3E04);">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
@@ -434,21 +469,21 @@
                         <h4 class="text-lg font-bold text-gray-800 mb-3">What I Offer:</h4>
                         <ul class="space-y-3">
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Poster Design</strong>
                                     <p class="text-gray-600">Event posters, promotional materials, and visual campaigns that grab attention</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Packaging Design</strong>
                                     <p class="text-gray-600">Product packaging that stands out on shelves and connects with consumers</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Booklet Design</strong>
                                     <p class="text-gray-600">Catalogs, brochures, and multi-page layouts with cohesive visual storytelling</p>
@@ -459,7 +494,7 @@
                     
                     <!-- CTA Button -->
                     <div class="text-center">
-                        <a href="#contact" onclick="closeModal('designModal')" class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                        <a href="#contact" onclick="closeModal('designModal')" class="inline-block text-white px-8 py-3 rounded-lg font-semibold transition-colors" style="background-color: #B25505;" onmouseover="this.style.backgroundColor='#8B3E04'" onmouseout="this.style.backgroundColor='#B25505'">
                             Get in Touch
                         </a>
                     </div>
@@ -471,7 +506,7 @@
         <div id="illustrationModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
             <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
                 <!-- Modal Header -->
-                <div class="sticky top-0 bg-gradient-to-r from-red-600 to-red-700 text-white p-6 rounded-t-2xl">
+                <div class="sticky top-0 text-white p-6 rounded-t-2xl" style="background: linear-gradient(to right, #B25505, #8B3E04);">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
@@ -500,21 +535,21 @@
                         <h4 class="text-lg font-bold text-gray-800 mb-3">What I Offer:</h4>
                         <ul class="space-y-3">
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Personal Illustration</strong>
                                     <p class="text-gray-600">Original artwork, concept pieces, and narrative-driven illustrations with emotional depth</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Character Design</strong>
                                     <p class="text-gray-600">Unique character concepts for games, animation, storytelling, and brand mascots</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Digital Art</strong>
                                     <p class="text-gray-600">Custom digital paintings, fan art, and commissioned illustrations</p>
@@ -525,7 +560,7 @@
                     
                     <!-- CTA Button -->
                     <div class="text-center">
-                        <a href="#contact" onclick="closeModal('illustrationModal')" class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                        <a href="#contact" onclick="closeModal('illustrationModal')" class="inline-block text-white px-8 py-3 rounded-lg font-semibold transition-colors" style="background-color: #B25505;" onmouseover="this.style.backgroundColor='#8B3E04'" onmouseout="this.style.backgroundColor='#B25505'">
                             Get in Touch
                         </a>
                     </div>
@@ -537,7 +572,7 @@
         <div id="photographyModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
             <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
                 <!-- Modal Header -->
-                <div class="sticky top-0 bg-gradient-to-r from-red-600 to-red-700 text-white p-6 rounded-t-2xl">
+                <div class="sticky top-0 text-white p-6 rounded-t-2xl" style="background: linear-gradient(to right, #B25505, #8B3E04);">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
@@ -557,8 +592,7 @@
                     <div class="mb-6">
                         <h4 class="text-xl font-bold text-gray-800 mb-3">Professional Photography</h4>
                         <p class="text-gray-700 leading-relaxed mb-4">
-                            I offer comprehensive photography services that capture moments with artistic precision and creative vision. With years of experience and a keen eye for detail, I specialize in creating stunning visual narratives that tell your story.
-                        </p>
+                            As a member of KLIFONARA (Klub Seni Fotografi Bina Nusantara), I’ve had the opportunity to be involved in several creative work programs like this one. Through these activities, I got the chance to collaborate with small local businesses and help them showcase their products through photography. For this particular project, I focused on capturing their perfume products, experimenting with lighting, composition, and visual storytelling to highlight their brand’s personality and appeal. It was a rewarding experience that allowed me to apply my photography skills in a real-world setting while supporting local enterprises.
                     </div>
                     
                     <!-- Services List -->
@@ -566,28 +600,28 @@
                         <h4 class="text-lg font-bold text-gray-800 mb-3">What I Offer:</h4>
                         <ul class="space-y-3">
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Portrait Photography</strong>
                                     <p class="text-gray-600">Professional headshots and personal portraits that capture your unique personality</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Event Photography</strong>
                                     <p class="text-gray-600">Complete coverage of your special events, from corporate to social gatherings</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Commercial Photography</strong>
                                     <p class="text-gray-600">Product photography, advertising campaigns, and brand content creation</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Creative Composition</strong>
                                     <p class="text-gray-600">Artistic approach with professional lighting and post-processing</p>
@@ -598,7 +632,7 @@
                     
                     <!-- CTA Button -->
                     <div class="text-center">
-                        <a href="#contact" onclick="closeModal('photographyModal')" class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                        <a href="#contact" onclick="closeModal('photographyModal')" class="inline-block text-white px-8 py-3 rounded-lg font-semibold transition-colors" style="background-color: #B25505;" onmouseover="this.style.backgroundColor='#8B3E04'" onmouseout="this.style.backgroundColor='#B25505'">
                             Get in Touch
                         </a>
                     </div>
