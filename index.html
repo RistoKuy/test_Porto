@@ -10,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
         <script>
             tailwind.config = {
                 theme: {
@@ -22,13 +23,6 @@
                 }
             }
         </script>
-        <style>
-            .notable-regular {
-                font-family: "Notable", sans-serif;
-                font-weight: 400;
-                font-style: normal;
-            }
-        </style>
     </head>
     <body class="bg-gray-50">
         <!-- Navigation -->
@@ -40,7 +34,7 @@
                         <!-- Custom Logo -->
                         <img src="img/hero_icon.png" alt="Logo" class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full">
                         <span class="text-sm sm:text-base md:text-xl font-semibold text-gray-800">
-                            Portofolio by <span class="text-red-500">Falisha Aulia</span>
+                            Portofolio by <span style="color: #B25505;">Falisha Aulia</span>
                         </span>
                     </a>
                     
@@ -80,16 +74,16 @@
             <div class="md:hidden absolute inset-0 flex items-center justify-center text-center text-white z-10">
                 <div class="max-w-4xl px-4 sm:px-6">
                     <h1 class="notable-regular text-4xl sm:text-5xl font-bold mb-4 sm:mb-6" data-aos="fade-up">
-                        Porto<span class="text-red-500">folio</span>
+                        Porto<span style="color: #B25505;">folio</span>
                     </h1>
                     <p class="text-lg sm:text-xl mb-6 sm:mb-8 text-gray-200" data-aos="fade-up" data-aos-delay="200">
                         Design & Digital Media
                     </p>
                     <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
-                        <a href="#portofolio" class="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors inline-block text-center">
+                        <a href="#portofolio" class="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg inline-block text-center">
                             View Works
                         </a>
-                        <a href="#contact" class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors">
+                        <a href="#contact" class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
                             Contact Me
                         </a>
                     </div>
@@ -98,13 +92,16 @@
         </section>
 
         <!-- About Me Section -->
-        <section id="about" class="py-12 sm:py-16 md:py-20 bg-white">
-            <div class="container mx-auto px-4 sm:px-6">
+        <section id="about" class="py-12 sm:py-16 md:py-20 bg-white bg-cover bg-center bg-no-repeat relative" style="background-image: url('img/about_bg.png');">
+            <!-- Semi-transparent white overlay - Only visible on mobile -->
+            <div class="md:hidden absolute inset-0 bg-white/80"></div>
+            
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center mb-10 sm:mb-12 md:mb-16">
                     <h2 class="notable-regular text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4" data-aos="fade-right" data-aos-offset="200">
-                        About <span class="text-red-500">Me</span>
+                        About <span style="color: #B25505;">Me</span>
                     </h2>
-                    <div class="w-20 sm:w-24 h-1 bg-red-500 mx-auto" data-aos="fade-left" data-aos-offset="200"></div>
+                    <div class="w-20 sm:w-24 h-1 mx-auto" style="background-color: #B25505;" data-aos="fade-left" data-aos-offset="200"></div>
                 </div>
                 
                 <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -112,17 +109,17 @@
                         <!-- Profile Picture - Mobile Only -->
                         <div class="text-center mb-6 sm:mb-8 md:hidden">
                             <div class="relative inline-block">
-                                <img src="img/falisha_pp.jpg" alt="Profile Picture" class="w-48 h-48 sm:w-64 sm:h-64 object-cover rounded-full shadow-2xl border-4 sm:border-8 border-white" data-aos="zoom-in" data-aos-offset="200"/>
+                                <img src="img/falisha_pp.jpg" alt="Profile Picture" class="w-full max-w-sm sm:max-w-md object-cover shadow-2xl" data-aos="zoom-in" data-aos-offset="200"/>
                             </div>
                         </div>
                         
                         <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6" data-aos="zoom-in-right" data-aos-offset="200">
                             What do you want to know?
                         </h3>
-                        <p class="text-sm sm:text-base md:text-lg text-gray-600 mb-6 sm:mb-8 text-justify leading-relaxed" data-aos="zoom-out-right" data-aos-offset="200">
-                            I’m Falisha, a visual designer and illustrator based in Indonesia, specializing in semi-realistic illustration and expressive, story-driven design. My work blends creativity with strategy—transforming visual concepts into compelling narratives that connect emotionally while serving a clear purpose.
+                        <p class="text-sm sm:text-base md:text-lg text-gray-600 mb-6 sm:mb-8 text-justify leading-relaxed font-bold" data-aos="zoom-out-right" data-aos-offset="200">
+                            I'm Falisha, a visual designer and illustrator based in Indonesia, specializing in semi-realistic illustration and expressive, story-driven design. My work blends creativity with strategy—transforming visual concepts into compelling narratives that connect emotionally while serving a clear purpose.
                             With a strong focus on composition, color psychology, and visual storytelling, I aim to craft designs that not only captivate the eye but also communicate meaning effectively. I see design as a problem-solving discipline, where each project is an opportunity to balance aesthetics, functionality, and emotion.
-                            Whether developing illustrations, brand visuals, or digital art, I’m driven by the challenge of translating ideas into visuals that inspire, engage, and leave a lasting impression.
+                            Whether developing illustrations, brand visuals, or digital art, I'm driven by the challenge of translating ideas into visuals that inspire, engage, and leave a lasting impression.
                         </p>
                         
                         <!-- Accordion -->
@@ -131,8 +128,8 @@
                             <h4 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Experience</h4>
                             
                             <!-- Experience Card - LinkedIn Style -->
-                            <div class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                                <button class="accordion-btn w-full text-left p-4 sm:p-6 hover:bg-gray-50 transition-colors flex justify-between items-start gap-3 sm:gap-4" data-target="experience">
+                            <div class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ease-in-out">
+                                <button class="accordion-btn w-full text-left p-4 sm:p-6 hover:bg-gray-50 transition-all duration-300 ease-in-out flex justify-between items-start gap-3 sm:gap-4" data-target="experience">
                                     <div class="flex gap-3 sm:gap-4 flex-1">
                                         <!-- Company Logo -->
                                         <div class="flex-shrink-0">
@@ -146,9 +143,9 @@
                                             <p class="text-xs sm:text-sm text-gray-600">Jakarta Metropolitan Area · Remote</p>
                                         </div>
                                     </div>
-                                    <i class="fas fa-chevron-down transform transition-transform text-gray-500 mt-1"></i>
+                                    <i class="fas fa-chevron-down transform transition-all duration-300 ease-in-out text-gray-500 mt-1"></i>
                                 </button>
-                                <div id="experience" class="accordion-content hidden px-4 sm:px-6 pb-4 sm:pb-6 pt-2">
+                                <div id="experience" class="accordion-content overflow-hidden transition-all duration-500 ease-in-out max-h-0 opacity-0 px-4 sm:px-6">
                                     <div class="pl-0 sm:pl-16">
                                         <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
                                             Working with Citizen OS Indonesia has been an enriching experience. Being part of their graphic design team has given me new perspectives, and I am truly grateful for the opportunity to intern here. I deeply appreciate how Citizen OS consistently upholds and advocates for human rights, which makes this journey even more meaningful.
@@ -162,13 +159,45 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ease-in-out">
+                                <button class="accordion-btn w-full text-left p-4 sm:p-6 hover:bg-gray-50 transition-all duration-300 ease-in-out flex justify-between items-start gap-3 sm:gap-4" data-target="experience2">
+                                    <div class="flex gap-3 sm:gap-4 flex-1">
+                                        <!-- Company Logo -->
+                                        <div class="flex-shrink-0">
+                                            <img src="img/klifonara_logo.jpg" alt="Klifonara" class="w-10 h-10 sm:w-12 sm:h-12 object-cover rounded">
+                                        </div>
+                                        <!-- Experience Info -->
+                                        <div class="flex-1">
+                                            <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-1">Secretary</h3>
+                                            <p class="text-sm sm:text-base text-gray-700 font-medium mb-1">Klifonara · Student Organization</p>
+                                            <p class="text-xs sm:text-sm text-gray-600 mb-1">Oct 2023 - Present</p>
+                                            <p class="text-xs sm:text-sm text-gray-600">Jakarta Metropolitan Area</p>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-chevron-down transform transition-all duration-300 ease-in-out text-gray-500 mt-1"></i>
+                                </button>
+                                <div id="experience2" class="accordion-content overflow-hidden transition-all duration-500 ease-in-out max-h-0 opacity-0 px-4 sm:px-6">
+                                    <div class="pl-0 sm:pl-16">
+                                        <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
+                                            General Secretary of Klub Fotografi Bina Nusantara
+                                        </p>
+                                        <!-- Skills Tags -->
+                                        <div class="flex flex-wrap gap-2 mt-4">
+                                            <span class="px-2.5 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full font-medium">Teamwork</span>
+                                            <span class="px-2.5 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full font-medium">Leadership</span>
+                                            <span class="px-2.5 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full font-medium">Documentation & Archiving</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             
                             <!-- Education Section -->
                             <h4 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 mt-6 sm:mt-8">Education</h4>
                             
                             <!-- Education Card - LinkedIn Style -->
-                            <div class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                                <button class="accordion-btn w-full text-left p-4 sm:p-6 hover:bg-gray-50 transition-colors flex justify-between items-start gap-3 sm:gap-4" data-target="education">
+                            <div class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ease-in-out">
+                                <button class="accordion-btn w-full text-left p-4 sm:p-6 hover:bg-gray-50 transition-all duration-300 ease-in-out flex justify-between items-start gap-3 sm:gap-4" data-target="education">
                                     <div class="flex gap-3 sm:gap-4 flex-1">
                                         <!-- University Logo -->
                                         <div class="flex-shrink-0">
@@ -181,9 +210,9 @@
                                             <p class="text-xs sm:text-sm text-gray-600">2022 - 2027</p>
                                         </div>
                                     </div>
-                                    <i class="fas fa-chevron-down transform transition-transform text-gray-500 mt-1"></i>
+                                    <i class="fas fa-chevron-down transform transition-all duration-300 ease-in-out text-gray-500 mt-1"></i>
                                 </button>
-                                <div id="education" class="accordion-content hidden px-4 sm:px-6 pb-4 sm:pb-6 pt-2">
+                                <div id="education" class="accordion-content overflow-hidden transition-all duration-500 ease-in-out max-h-0 opacity-0 px-4 sm:px-6">
                                     <div class="pl-0 sm:pl-16">
                                         <p class="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">
                                             Pursuing a Bachelor's degree in Design and Visual Communications with a focus on creative problem-solving, digital media, and visual storytelling. Developing comprehensive skills in graphic design, illustration, and multimedia production.
@@ -208,7 +237,7 @@
                     <!-- Profile Picture - Desktop Only -->
                     <div class="text-center hidden md:block">
                         <div class="relative inline-block">
-                            <img src="img/falisha_pp.jpg" alt="Profile Picture" class="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-cover rounded-full shadow-2xl border-4 sm:border-8 border-white" data-aos="zoom-in" data-aos-offset="200"/>
+                            <img src="img/falisha_pp.jpg" alt="Profile Picture" class="w-full max-w-md object-cover shadow-2xl" data-aos="zoom-in" data-aos-offset="200"/>
                         </div>
                     </div>
                 </div>
@@ -220,11 +249,88 @@
             <div class="w-full">
                 <div class="text-center mb-10 sm:mb-12 md:mb-16 px-4 sm:px-6">
                     <h2 class="notable-regular text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4" data-aos="fade-up">
-                        My <span class="text-red-500">Works</span>
+                        My <span style="color: #B25505;">Works</span>
                     </h2>
-                    <div class="w-20 sm:w-24 h-1 bg-red-500 mx-auto" data-aos="fade-left" data-aos-offset="300"></div>
+                    <div class="w-20 sm:w-24 h-1 mx-auto" style="background-color: #B25505;" data-aos="fade-left" data-aos-offset="300"></div>
                 </div>
-                
+                    
+                    <!-- Portfolio Item 2 - Design Works -->
+                    <div class="bg-white overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative overflow-hidden">
+                            <!-- Design Carousel -->
+                            <div class="relative h-[50vh] sm:h-[60vh] md:h-[70vh]">
+                                <div class="poster-carousel h-full">
+                                    <div class="poster-slide active">
+                                        <img src="img/poster1.png" alt="Poster Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                    <div class="poster-slide">
+                                        <img src="img/package1.png" alt="Packaging Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                    <div class="poster-slide">
+                                        <img src="img/booklet1.png" alt="Booklet Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                    <div class="poster-slide">
+                                        <img src="img/merch1.jpg" alt="Merch Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                </div>
+                                <!-- Carousel Controls -->
+                                <button onclick="changePosterSlide(-1)" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
+                                    <i class="fas fa-chevron-left text-2xl sm:text-3xl md:text-4xl"></i>
+                                </button>
+                                <button onclick="changePosterSlide(1)" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
+                                    <i class="fas fa-chevron-right text-2xl sm:text-3xl md:text-4xl"></i>
+                                </button>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col items-center justify-end pb-8 sm:pb-12 md:pb-16 pointer-events-none">
+                                <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3">Design Works</h3>
+                                <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6">Poster, Packaging & Booklet Design</p>
+                                <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
+                                    <span class="text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium" style="background-color: #B25505;">Design</span>
+                                </div>
+                                <button onclick="openModal('designModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg pointer-events-auto">Info</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 3 - Illustration Works -->
+                    <div class="bg-white overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative overflow-hidden">
+                            <!-- Illustration Carousel -->
+                            <div class="relative h-[50vh] sm:h-[60vh] md:h-[70vh]">
+                                <div class="illustration-carousel h-full">
+                                    <div class="illustration-slide active">
+                                        <img src="img/illust1.png" alt="Personal Illustration" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                    <div class="illustration-slide">
+                                        <img src="img/chara1.png" alt="Character Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                    <div class="illustration-slide">
+                                        <img src="img/story1.jpg" alt="Storybook Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                    <div class="illustration-slide">
+                                        <img src="img/editorial1.jpg" alt="Editorial Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                </div>
+                                <!-- Carousel Controls -->
+                                <button onclick="changeIllustrationSlide(-1)" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
+                                    <i class="fas fa-chevron-left text-2xl sm:text-3xl md:text-4xl"></i>
+                                </button>
+                                <button onclick="changeIllustrationSlide(1)" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
+                                    <i class="fas fa-chevron-right text-2xl sm:text-3xl md:text-4xl"></i>
+                                </button>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col items-center justify-end pb-8 sm:pb-12 md:pb-16 pointer-events-none">
+                                <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3">Illustration Works</h3>
+                                <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6">Personal Illustration & Character Design</p>
+                                <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
+                                    <span class="text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium" style="background-color: #B25505;">Illustration</span>
+                                </div>
+                                <button onclick="openModal('illustrationModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg pointer-events-auto">Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="w-full space-y-0">
                     <!-- Portfolio Item 1 - Photography -->
                     <div class="bg-white overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
@@ -257,102 +363,13 @@
                                 <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3">Photography</h3>
                                 <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6">Portrait, Event & Commercial Photography</p>
                                 <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
-                                    <span class="bg-blue-600 text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium">Photography</span>
+                                    <span class="text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium" style="background-color: #B25505;">Photography</span>
                                 </div>
-                                <button onclick="openModal('photographyModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors pointer-events-auto">Info</button>
+                                <button onclick="openModal('photographyModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg pointer-events-auto">Info</button>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Portfolio Item 2 - Design Works -->
-                    <div class="bg-white overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
-                        <div class="relative overflow-hidden">
-                            <!-- Design Carousel -->
-                            <div class="relative h-[50vh] sm:h-[60vh] md:h-[70vh]">
-                                <div class="poster-carousel h-full">
-                                    <div class="poster-slide active">
-                                        <img src="img/poster1.png" alt="Poster Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
-                                    </div>
-                                    <div class="poster-slide">
-                                        <img src="img/package1.png" alt="Packaging Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
-                                    </div>
-                                    <div class="poster-slide">
-                                        <img src="img/booklet1.png" alt="Booklet Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
-                                    </div>
-                                </div>
-                                <!-- Carousel Controls -->
-                                <button onclick="changePosterSlide(-1)" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
-                                    <i class="fas fa-chevron-left text-2xl sm:text-3xl md:text-4xl"></i>
-                                </button>
-                                <button onclick="changePosterSlide(1)" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
-                                    <i class="fas fa-chevron-right text-2xl sm:text-3xl md:text-4xl"></i>
-                                </button>
-                            </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col items-center justify-end pb-8 sm:pb-12 md:pb-16 pointer-events-none">
-                                <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3">Design Works</h3>
-                                <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6">Poster, Packaging & Booklet Design</p>
-                                <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
-                                    <span class="bg-purple-600 text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium">Design</span>
-                                </div>
-                                <button onclick="openModal('designModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors pointer-events-auto">Info</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Portfolio Item 3 - Illustration Works -->
-                    <div class="bg-white overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
-                        <div class="relative overflow-hidden">
-                            <!-- Illustration Carousel -->
-                            <div class="relative h-[50vh] sm:h-[60vh] md:h-[70vh]">
-                                <div class="illustration-carousel h-full">
-                                    <div class="illustration-slide active">
-                                        <img src="img/illust1.png" alt="Personal Illustration" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
-                                    </div>
-                                    <div class="illustration-slide">
-                                        <img src="img/chara1.png" alt="Character Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
-                                    </div>
-                                </div>
-                                <!-- Carousel Controls -->
-                                <button onclick="changeIllustrationSlide(-1)" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
-                                    <i class="fas fa-chevron-left text-2xl sm:text-3xl md:text-4xl"></i>
-                                </button>
-                                <button onclick="changeIllustrationSlide(1)" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
-                                    <i class="fas fa-chevron-right text-2xl sm:text-3xl md:text-4xl"></i>
-                                </button>
-                            </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col items-center justify-end pb-8 sm:pb-12 md:pb-16 pointer-events-none">
-                                <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3">Illustration Works</h3>
-                                <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6">Personal Illustration & Character Design</p>
-                                <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
-                                    <span class="bg-red-600 text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium">Illustration</span>
-                                </div>
-                                <button onclick="openModal('illustrationModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors pointer-events-auto">Info</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 
-                <!-- Add CSS for carousel slides -->
-                <style>
-                    .poster-slide, .illustration-slide, .photography-slide {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        opacity: 0;
-                        transition: opacity 0.5s ease-in-out;
-                    }
-                    
-                    .poster-slide.active, .illustration-slide.active, .photography-slide.active {
-                        opacity: 1;
-                    }
-                    
-                    /* Smooth transition for zoomed image */
-                    #zoomedImage {
-                        transition: opacity 0.2s ease-in-out;
-                    }
-                </style>
             </div>
         </section>
     
@@ -360,8 +377,8 @@
         <section id="contact" class="py-12 sm:py-16 md:py-20 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
-                    <h2 class="notable-regular text-4xl md:text-5xl font-bold text-gray-800 mb-4">Feel free <span class="text-red-500">To Connect Me</span></h2>
-                    <div class="w-24 h-1 bg-red-500 mx-auto"></div>
+                    <h2 class="notable-regular text-4xl md:text-5xl font-bold text-gray-800 mb-4">Feel free <span style="color: #B25505;">To Connect Me</span></h2>
+                    <div class="w-24 h-1 mx-auto" style="background-color: #B25505;"></div>
                 </div>
                 
                 <div class="max-w-2xl mx-auto">
@@ -393,10 +410,10 @@
         </section>
         
         <!-- Design Works Modal (Poster, Packaging, Booklet) -->
-        <div id="designModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
-            <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
+        <div id="designModal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+            <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
                 <!-- Modal Header -->
-                <div class="sticky top-0 bg-gradient-to-r from-purple-600 to-purple-700 text-white p-6 rounded-t-2xl">
+                <div class="sticky top-0 text-white p-6 rounded-t-2xl" style="background: linear-gradient(to right, #B25505, #8B3E04);">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
@@ -404,7 +421,7 @@
                             </div>
                             <h3 class="text-2xl font-bold">Design Works</h3>
                         </div>
-                        <button onclick="closeModal('designModal')" class="text-white hover:bg-white/20 rounded-full p-2 transition-colors">
+                        <button onclick="closeModal('designModal')" class="text-white hover:bg-white/20 rounded-full p-2 transition-all duration-300 ease-in-out transform hover:rotate-90">
                             <i class="fas fa-times text-xl"></i>
                         </button>
                     </div>
@@ -425,21 +442,21 @@
                         <h4 class="text-lg font-bold text-gray-800 mb-3">What I Offer:</h4>
                         <ul class="space-y-3">
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-purple-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Poster Design</strong>
                                     <p class="text-gray-600">Event posters, promotional materials, and visual campaigns that grab attention</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-purple-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Packaging Design</strong>
                                     <p class="text-gray-600">Product packaging that stands out on shelves and connects with consumers</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-purple-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Booklet Design</strong>
                                     <p class="text-gray-600">Catalogs, brochures, and multi-page layouts with cohesive visual storytelling</p>
@@ -450,7 +467,7 @@
                     
                     <!-- CTA Button -->
                     <div class="text-center">
-                        <a href="#contact" onclick="closeModal('designModal')" class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                        <a href="#contact" onclick="closeModal('designModal')" class="inline-block text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-110 hover:shadow-xl" style="background-color: #B25505;" onmouseover="this.style.backgroundColor='#8B3E04'" onmouseout="this.style.backgroundColor='#B25505'">
                             Get in Touch
                         </a>
                     </div>
@@ -459,10 +476,10 @@
         </div>
 
         <!-- Illustration Modal -->
-        <div id="illustrationModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
-            <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
+        <div id="illustrationModal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+            <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
                 <!-- Modal Header -->
-                <div class="sticky top-0 bg-gradient-to-r from-red-600 to-red-700 text-white p-6 rounded-t-2xl">
+                <div class="sticky top-0 text-white p-6 rounded-t-2xl" style="background: linear-gradient(to right, #B25505, #8B3E04);">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
@@ -470,7 +487,7 @@
                             </div>
                             <h3 class="text-2xl font-bold">Illustration Services</h3>
                         </div>
-                        <button onclick="closeModal('illustrationModal')" class="text-white hover:bg-white/20 rounded-full p-2 transition-colors">
+                        <button onclick="closeModal('illustrationModal')" class="text-white hover:bg-white/20 rounded-full p-2 transition-all duration-300 ease-in-out transform hover:rotate-90">
                             <i class="fas fa-times text-xl"></i>
                         </button>
                     </div>
@@ -491,21 +508,21 @@
                         <h4 class="text-lg font-bold text-gray-800 mb-3">What I Offer:</h4>
                         <ul class="space-y-3">
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Personal Illustration</strong>
                                     <p class="text-gray-600">Original artwork, concept pieces, and narrative-driven illustrations with emotional depth</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Character Design</strong>
                                     <p class="text-gray-600">Unique character concepts for games, animation, storytelling, and brand mascots</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Digital Art</strong>
                                     <p class="text-gray-600">Custom digital paintings, fan art, and commissioned illustrations</p>
@@ -516,7 +533,7 @@
                     
                     <!-- CTA Button -->
                     <div class="text-center">
-                        <a href="#contact" onclick="closeModal('illustrationModal')" class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                        <a href="#contact" onclick="closeModal('illustrationModal')" class="inline-block text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-110 hover:shadow-xl" style="background-color: #B25505;" onmouseover="this.style.backgroundColor='#8B3E04'" onmouseout="this.style.backgroundColor='#B25505'">
                             Get in Touch
                         </a>
                     </div>
@@ -525,10 +542,10 @@
         </div>
 
         <!-- Photography Modal -->
-        <div id="photographyModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
-            <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
+        <div id="photographyModal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+            <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
                 <!-- Modal Header -->
-                <div class="sticky top-0 bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6 rounded-t-2xl">
+                <div class="sticky top-0 text-white p-6 rounded-t-2xl" style="background: linear-gradient(to right, #B25505, #8B3E04);">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
@@ -536,7 +553,7 @@
                             </div>
                             <h3 class="text-2xl font-bold">Photography Services</h3>
                         </div>
-                        <button onclick="closeModal('photographyModal')" class="text-white hover:bg-white/20 rounded-full p-2 transition-colors">
+                        <button onclick="closeModal('photographyModal')" class="text-white hover:bg-white/20 rounded-full p-2 transition-all duration-300 ease-in-out transform hover:rotate-90">
                             <i class="fas fa-times text-xl"></i>
                         </button>
                     </div>
@@ -548,8 +565,7 @@
                     <div class="mb-6">
                         <h4 class="text-xl font-bold text-gray-800 mb-3">Professional Photography</h4>
                         <p class="text-gray-700 leading-relaxed mb-4">
-                            I offer comprehensive photography services that capture moments with artistic precision and creative vision. With years of experience and a keen eye for detail, I specialize in creating stunning visual narratives that tell your story.
-                        </p>
+                            As a member of KLIFONARA (Klub Seni Fotografi Bina Nusantara), I’ve had the opportunity to be involved in several creative work programs like this one. Through these activities, I got the chance to collaborate with small local businesses and help them showcase their products through photography. For this particular project, I focused on capturing their perfume products, experimenting with lighting, composition, and visual storytelling to highlight their brand’s personality and appeal. It was a rewarding experience that allowed me to apply my photography skills in a real-world setting while supporting local enterprises.
                     </div>
                     
                     <!-- Services List -->
@@ -557,28 +573,28 @@
                         <h4 class="text-lg font-bold text-gray-800 mb-3">What I Offer:</h4>
                         <ul class="space-y-3">
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Portrait Photography</strong>
                                     <p class="text-gray-600">Professional headshots and personal portraits that capture your unique personality</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Event Photography</strong>
                                     <p class="text-gray-600">Complete coverage of your special events, from corporate to social gatherings</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Commercial Photography</strong>
                                     <p class="text-gray-600">Product photography, advertising campaigns, and brand content creation</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                                <i class="fas fa-check-circle mt-1" style="color: #B25505;"></i>
                                 <div>
                                     <strong class="text-gray-800">Creative Composition</strong>
                                     <p class="text-gray-600">Artistic approach with professional lighting and post-processing</p>
@@ -589,7 +605,7 @@
                     
                     <!-- CTA Button -->
                     <div class="text-center">
-                        <a href="#contact" onclick="closeModal('photographyModal')" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                        <a href="#contact" onclick="closeModal('photographyModal')" class="inline-block text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-110 hover:shadow-xl" style="background-color: #B25505;" onmouseover="this.style.backgroundColor='#8B3E04'" onmouseout="this.style.backgroundColor='#B25505'">
                             Get in Touch
                         </a>
                     </div>
@@ -624,13 +640,9 @@
         </div>
 
         <!-- Footer -->
-        <footer class="bg-blue-600 text-white text-center py-8">
+        <footer class="bg-black text-white text-center py-8">
             <div class="container mx-auto px-4">
-                <!-- <p class="text-lg font-semibold">Designed & Powered by LB32 - New Media</p>
-                <p class="text-3xl font-normal text-white mt-4" data-node-id="2:14453">
-                    By Falisha Aulia Syarafia
-                </p> -->
-                <p class="text-blue-200 mt-2">© 2025 All rights reserved.</p>
+            <p class="text-gray-400 mt-2">© 2025 All rights reserved.</p>
             </div>
         </footer>
 
@@ -706,22 +718,30 @@
                     const content = document.getElementById(target);
                     const icon = button.querySelector('i');
                     
-                    // Close other accordions
+                    // Check if this accordion is currently open
+                    const isOpen = content.classList.contains('accordion-open');
+                    
+                    // Close all accordions
                     document.querySelectorAll('.accordion-content').forEach(acc => {
-                        if (acc !== content) {
-                            acc.classList.add('hidden');
-                        }
+                        acc.classList.remove('accordion-open', 'pb-4', 'sm:pb-6', 'pt-2');
+                        acc.style.maxHeight = '0';
+                        acc.classList.remove('opacity-100');
+                        acc.classList.add('opacity-0');
                     });
                     
+                    // Reset all icons
                     document.querySelectorAll('.accordion-btn i').forEach(i => {
-                        if (i !== icon) {
-                            i.classList.remove('rotate-180');
-                        }
+                        i.classList.remove('rotate-180');
                     });
                     
-                    // Toggle current accordion
-                    content.classList.toggle('hidden');
-                    icon.classList.toggle('rotate-180');
+                    // If it wasn't open, open it
+                    if (!isOpen) {
+                        content.classList.add('accordion-open', 'pb-4', 'sm:pb-6', 'pt-2');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        content.classList.remove('opacity-0');
+                        content.classList.add('opacity-100');
+                        icon.classList.add('rotate-180');
+                    }
                 });
             });
 
@@ -744,6 +764,10 @@
                 const modal = document.getElementById(modalId);
                 if (modal) {
                     modal.classList.remove('hidden');
+                    // Trigger reflow to ensure animation plays
+                    modal.offsetHeight;
+                    modal.classList.add('modal-show');
+                    modal.classList.remove('modal-hide');
                     document.body.style.overflow = 'hidden';
                 }
             }
@@ -751,19 +775,32 @@
             function closeModal(modalId) {
                 const modal = document.getElementById(modalId);
                 if (modal) {
-                    modal.classList.add('hidden');
-                    document.body.style.overflow = 'auto';
+                    modal.classList.add('modal-hide');
+                    modal.classList.remove('modal-show');
+                    
+                    // Wait for animation to complete before hiding
+                    setTimeout(() => {
+                        modal.classList.add('hidden');
+                        document.body.style.overflow = 'auto';
+                    }, 300);
                 }
             }
 
             // Close modal when clicking outside
             document.addEventListener('click', function(event) {
-                if (event.target.classList.contains('bg-opacity-50')) {
+                if (event.target.classList.contains('modal-overlay')) {
                     const modals = document.querySelectorAll('[id$="Modal"]');
                     modals.forEach(modal => {
-                        modal.classList.add('hidden');
+                        if (!modal.classList.contains('hidden')) {
+                            modal.classList.add('modal-hide');
+                            modal.classList.remove('modal-show');
+                            
+                            setTimeout(() => {
+                                modal.classList.add('hidden');
+                                document.body.style.overflow = 'auto';
+                            }, 300);
+                        }
                     });
-                    document.body.style.overflow = 'auto';
                 }
             });
 
@@ -772,9 +809,16 @@
                 if (event.key === 'Escape') {
                     const modals = document.querySelectorAll('[id$="Modal"]');
                     modals.forEach(modal => {
-                        modal.classList.add('hidden');
+                        if (!modal.classList.contains('hidden')) {
+                            modal.classList.add('modal-hide');
+                            modal.classList.remove('modal-show');
+                            
+                            setTimeout(() => {
+                                modal.classList.add('hidden');
+                                document.body.style.overflow = 'auto';
+                            }, 300);
+                        }
                     });
-                    document.body.style.overflow = 'auto';
                 }
             });
 
