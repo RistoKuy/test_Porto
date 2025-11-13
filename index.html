@@ -10,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
         <script>
             tailwind.config = {
                 theme: {
@@ -22,13 +23,6 @@
                 }
             }
         </script>
-        <style>
-            .notable-regular {
-                font-family: "Notable", sans-serif;
-                font-weight: 400;
-                font-style: normal;
-            }
-        </style>
     </head>
     <body class="bg-gray-50">
         <!-- Navigation -->
@@ -86,10 +80,10 @@
                         Design & Digital Media
                     </p>
                     <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
-                        <a href="#portofolio" class="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors inline-block text-center">
+                        <a href="#portofolio" class="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg inline-block text-center">
                             View Works
                         </a>
-                        <a href="#contact" class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors">
+                        <a href="#contact" class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
                             Contact Me
                         </a>
                     </div>
@@ -134,8 +128,8 @@
                             <h4 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Experience</h4>
                             
                             <!-- Experience Card - LinkedIn Style -->
-                            <div class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                                <button class="accordion-btn w-full text-left p-4 sm:p-6 hover:bg-gray-50 transition-colors flex justify-between items-start gap-3 sm:gap-4" data-target="experience">
+                            <div class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ease-in-out">
+                                <button class="accordion-btn w-full text-left p-4 sm:p-6 hover:bg-gray-50 transition-all duration-300 ease-in-out flex justify-between items-start gap-3 sm:gap-4" data-target="experience">
                                     <div class="flex gap-3 sm:gap-4 flex-1">
                                         <!-- Company Logo -->
                                         <div class="flex-shrink-0">
@@ -149,9 +143,9 @@
                                             <p class="text-xs sm:text-sm text-gray-600">Jakarta Metropolitan Area · Remote</p>
                                         </div>
                                     </div>
-                                    <i class="fas fa-chevron-down transform transition-transform text-gray-500 mt-1"></i>
+                                    <i class="fas fa-chevron-down transform transition-all duration-300 ease-in-out text-gray-500 mt-1"></i>
                                 </button>
-                                <div id="experience" class="accordion-content hidden px-4 sm:px-6 pb-4 sm:pb-6 pt-2">
+                                <div id="experience" class="accordion-content overflow-hidden transition-all duration-500 ease-in-out max-h-0 opacity-0 px-4 sm:px-6">
                                     <div class="pl-0 sm:pl-16">
                                         <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
                                             Working with Citizen OS Indonesia has been an enriching experience. Being part of their graphic design team has given me new perspectives, and I am truly grateful for the opportunity to intern here. I deeply appreciate how Citizen OS consistently upholds and advocates for human rights, which makes this journey even more meaningful.
@@ -166,8 +160,8 @@
                                 </div>
                             </div>
 
-                            <div class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                                <button class="accordion-btn w-full text-left p-4 sm:p-6 hover:bg-gray-50 transition-colors flex justify-between items-start gap-3 sm:gap-4" data-target="experience2">
+                            <div class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ease-in-out">
+                                <button class="accordion-btn w-full text-left p-4 sm:p-6 hover:bg-gray-50 transition-all duration-300 ease-in-out flex justify-between items-start gap-3 sm:gap-4" data-target="experience2">
                                     <div class="flex gap-3 sm:gap-4 flex-1">
                                         <!-- Company Logo -->
                                         <div class="flex-shrink-0">
@@ -181,9 +175,9 @@
                                             <p class="text-xs sm:text-sm text-gray-600">Jakarta Metropolitan Area</p>
                                         </div>
                                     </div>
-                                    <i class="fas fa-chevron-down transform transition-transform text-gray-500 mt-1"></i>
+                                    <i class="fas fa-chevron-down transform transition-all duration-300 ease-in-out text-gray-500 mt-1"></i>
                                 </button>
-                                <div id="experience2" class="accordion-content hidden px-4 sm:px-6 pb-4 sm:pb-6 pt-2">
+                                <div id="experience2" class="accordion-content overflow-hidden transition-all duration-500 ease-in-out max-h-0 opacity-0 px-4 sm:px-6">
                                     <div class="pl-0 sm:pl-16">
                                         <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
                                             General Secretary of Klub Fotografi Bina Nusantara
@@ -202,8 +196,8 @@
                             <h4 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 mt-6 sm:mt-8">Education</h4>
                             
                             <!-- Education Card - LinkedIn Style -->
-                            <div class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                                <button class="accordion-btn w-full text-left p-4 sm:p-6 hover:bg-gray-50 transition-colors flex justify-between items-start gap-3 sm:gap-4" data-target="education">
+                            <div class="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ease-in-out">
+                                <button class="accordion-btn w-full text-left p-4 sm:p-6 hover:bg-gray-50 transition-all duration-300 ease-in-out flex justify-between items-start gap-3 sm:gap-4" data-target="education">
                                     <div class="flex gap-3 sm:gap-4 flex-1">
                                         <!-- University Logo -->
                                         <div class="flex-shrink-0">
@@ -216,9 +210,9 @@
                                             <p class="text-xs sm:text-sm text-gray-600">2022 - 2027</p>
                                         </div>
                                     </div>
-                                    <i class="fas fa-chevron-down transform transition-transform text-gray-500 mt-1"></i>
+                                    <i class="fas fa-chevron-down transform transition-all duration-300 ease-in-out text-gray-500 mt-1"></i>
                                 </button>
-                                <div id="education" class="accordion-content hidden px-4 sm:px-6 pb-4 sm:pb-6 pt-2">
+                                <div id="education" class="accordion-content overflow-hidden transition-all duration-500 ease-in-out max-h-0 opacity-0 px-4 sm:px-6">
                                     <div class="pl-0 sm:pl-16">
                                         <p class="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">
                                             Pursuing a Bachelor's degree in Design and Visual Communications with a focus on creative problem-solving, digital media, and visual storytelling. Developing comprehensive skills in graphic design, illustration, and multimedia production.
@@ -293,7 +287,7 @@
                                 <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
                                     <span class="text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium" style="background-color: #B25505;">Design</span>
                                 </div>
-                                <button onclick="openModal('designModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors pointer-events-auto">Info</button>
+                                <button onclick="openModal('designModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg pointer-events-auto">Info</button>
                             </div>
                         </div>
                     </div>
@@ -331,7 +325,7 @@
                                 <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
                                     <span class="text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium" style="background-color: #B25505;">Illustration</span>
                                 </div>
-                                <button onclick="openModal('illustrationModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors pointer-events-auto">Info</button>
+                                <button onclick="openModal('illustrationModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg pointer-events-auto">Info</button>
                             </div>
                         </div>
                     </div>
@@ -371,32 +365,11 @@
                                 <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
                                     <span class="text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium" style="background-color: #B25505;">Photography</span>
                                 </div>
-                                <button onclick="openModal('photographyModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors pointer-events-auto">Info</button>
+                                <button onclick="openModal('photographyModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg pointer-events-auto">Info</button>
                             </div>
                         </div>
                     </div>
                 
-                <!-- Add CSS for carousel slides -->
-                <style>
-                    .poster-slide, .illustration-slide, .photography-slide {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        opacity: 0;
-                        transition: opacity 0.5s ease-in-out;
-                    }
-                    
-                    .poster-slide.active, .illustration-slide.active, .photography-slide.active {
-                        opacity: 1;
-                    }
-                    
-                    /* Smooth transition for zoomed image */
-                    #zoomedImage {
-                        transition: opacity 0.2s ease-in-out;
-                    }
-                </style>
             </div>
         </section>
     
@@ -437,8 +410,8 @@
         </section>
         
         <!-- Design Works Modal (Poster, Packaging, Booklet) -->
-        <div id="designModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
-            <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
+        <div id="designModal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+            <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
                 <!-- Modal Header -->
                 <div class="sticky top-0 text-white p-6 rounded-t-2xl" style="background: linear-gradient(to right, #B25505, #8B3E04);">
                     <div class="flex items-center justify-between">
@@ -448,7 +421,7 @@
                             </div>
                             <h3 class="text-2xl font-bold">Design Works</h3>
                         </div>
-                        <button onclick="closeModal('designModal')" class="text-white hover:bg-white/20 rounded-full p-2 transition-colors">
+                        <button onclick="closeModal('designModal')" class="text-white hover:bg-white/20 rounded-full p-2 transition-all duration-300 ease-in-out transform hover:rotate-90">
                             <i class="fas fa-times text-xl"></i>
                         </button>
                     </div>
@@ -494,7 +467,7 @@
                     
                     <!-- CTA Button -->
                     <div class="text-center">
-                        <a href="#contact" onclick="closeModal('designModal')" class="inline-block text-white px-8 py-3 rounded-lg font-semibold transition-colors" style="background-color: #B25505;" onmouseover="this.style.backgroundColor='#8B3E04'" onmouseout="this.style.backgroundColor='#B25505'">
+                        <a href="#contact" onclick="closeModal('designModal')" class="inline-block text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-110 hover:shadow-xl" style="background-color: #B25505;" onmouseover="this.style.backgroundColor='#8B3E04'" onmouseout="this.style.backgroundColor='#B25505'">
                             Get in Touch
                         </a>
                     </div>
@@ -503,8 +476,8 @@
         </div>
 
         <!-- Illustration Modal -->
-        <div id="illustrationModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
-            <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
+        <div id="illustrationModal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+            <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
                 <!-- Modal Header -->
                 <div class="sticky top-0 text-white p-6 rounded-t-2xl" style="background: linear-gradient(to right, #B25505, #8B3E04);">
                     <div class="flex items-center justify-between">
@@ -514,7 +487,7 @@
                             </div>
                             <h3 class="text-2xl font-bold">Illustration Services</h3>
                         </div>
-                        <button onclick="closeModal('illustrationModal')" class="text-white hover:bg-white/20 rounded-full p-2 transition-colors">
+                        <button onclick="closeModal('illustrationModal')" class="text-white hover:bg-white/20 rounded-full p-2 transition-all duration-300 ease-in-out transform hover:rotate-90">
                             <i class="fas fa-times text-xl"></i>
                         </button>
                     </div>
@@ -560,7 +533,7 @@
                     
                     <!-- CTA Button -->
                     <div class="text-center">
-                        <a href="#contact" onclick="closeModal('illustrationModal')" class="inline-block text-white px-8 py-3 rounded-lg font-semibold transition-colors" style="background-color: #B25505;" onmouseover="this.style.backgroundColor='#8B3E04'" onmouseout="this.style.backgroundColor='#B25505'">
+                        <a href="#contact" onclick="closeModal('illustrationModal')" class="inline-block text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-110 hover:shadow-xl" style="background-color: #B25505;" onmouseover="this.style.backgroundColor='#8B3E04'" onmouseout="this.style.backgroundColor='#B25505'">
                             Get in Touch
                         </a>
                     </div>
@@ -569,8 +542,8 @@
         </div>
 
         <!-- Photography Modal -->
-        <div id="photographyModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
-            <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
+        <div id="photographyModal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+            <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
                 <!-- Modal Header -->
                 <div class="sticky top-0 text-white p-6 rounded-t-2xl" style="background: linear-gradient(to right, #B25505, #8B3E04);">
                     <div class="flex items-center justify-between">
@@ -580,7 +553,7 @@
                             </div>
                             <h3 class="text-2xl font-bold">Photography Services</h3>
                         </div>
-                        <button onclick="closeModal('photographyModal')" class="text-white hover:bg-white/20 rounded-full p-2 transition-colors">
+                        <button onclick="closeModal('photographyModal')" class="text-white hover:bg-white/20 rounded-full p-2 transition-all duration-300 ease-in-out transform hover:rotate-90">
                             <i class="fas fa-times text-xl"></i>
                         </button>
                     </div>
@@ -632,7 +605,7 @@
                     
                     <!-- CTA Button -->
                     <div class="text-center">
-                        <a href="#contact" onclick="closeModal('photographyModal')" class="inline-block text-white px-8 py-3 rounded-lg font-semibold transition-colors" style="background-color: #B25505;" onmouseover="this.style.backgroundColor='#8B3E04'" onmouseout="this.style.backgroundColor='#B25505'">
+                        <a href="#contact" onclick="closeModal('photographyModal')" class="inline-block text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-110 hover:shadow-xl" style="background-color: #B25505;" onmouseover="this.style.backgroundColor='#8B3E04'" onmouseout="this.style.backgroundColor='#B25505'">
                             Get in Touch
                         </a>
                     </div>
@@ -745,22 +718,30 @@
                     const content = document.getElementById(target);
                     const icon = button.querySelector('i');
                     
-                    // Close other accordions
+                    // Check if this accordion is currently open
+                    const isOpen = content.classList.contains('accordion-open');
+                    
+                    // Close all accordions
                     document.querySelectorAll('.accordion-content').forEach(acc => {
-                        if (acc !== content) {
-                            acc.classList.add('hidden');
-                        }
+                        acc.classList.remove('accordion-open', 'pb-4', 'sm:pb-6', 'pt-2');
+                        acc.style.maxHeight = '0';
+                        acc.classList.remove('opacity-100');
+                        acc.classList.add('opacity-0');
                     });
                     
+                    // Reset all icons
                     document.querySelectorAll('.accordion-btn i').forEach(i => {
-                        if (i !== icon) {
-                            i.classList.remove('rotate-180');
-                        }
+                        i.classList.remove('rotate-180');
                     });
                     
-                    // Toggle current accordion
-                    content.classList.toggle('hidden');
-                    icon.classList.toggle('rotate-180');
+                    // If it wasn't open, open it
+                    if (!isOpen) {
+                        content.classList.add('accordion-open', 'pb-4', 'sm:pb-6', 'pt-2');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        content.classList.remove('opacity-0');
+                        content.classList.add('opacity-100');
+                        icon.classList.add('rotate-180');
+                    }
                 });
             });
 
@@ -783,6 +764,10 @@
                 const modal = document.getElementById(modalId);
                 if (modal) {
                     modal.classList.remove('hidden');
+                    // Trigger reflow to ensure animation plays
+                    modal.offsetHeight;
+                    modal.classList.add('modal-show');
+                    modal.classList.remove('modal-hide');
                     document.body.style.overflow = 'hidden';
                 }
             }
@@ -790,19 +775,32 @@
             function closeModal(modalId) {
                 const modal = document.getElementById(modalId);
                 if (modal) {
-                    modal.classList.add('hidden');
-                    document.body.style.overflow = 'auto';
+                    modal.classList.add('modal-hide');
+                    modal.classList.remove('modal-show');
+                    
+                    // Wait for animation to complete before hiding
+                    setTimeout(() => {
+                        modal.classList.add('hidden');
+                        document.body.style.overflow = 'auto';
+                    }, 300);
                 }
             }
 
             // Close modal when clicking outside
             document.addEventListener('click', function(event) {
-                if (event.target.classList.contains('bg-opacity-50')) {
+                if (event.target.classList.contains('modal-overlay')) {
                     const modals = document.querySelectorAll('[id$="Modal"]');
                     modals.forEach(modal => {
-                        modal.classList.add('hidden');
+                        if (!modal.classList.contains('hidden')) {
+                            modal.classList.add('modal-hide');
+                            modal.classList.remove('modal-show');
+                            
+                            setTimeout(() => {
+                                modal.classList.add('hidden');
+                                document.body.style.overflow = 'auto';
+                            }, 300);
+                        }
                     });
-                    document.body.style.overflow = 'auto';
                 }
             });
 
@@ -811,9 +809,16 @@
                 if (event.key === 'Escape') {
                     const modals = document.querySelectorAll('[id$="Modal"]');
                     modals.forEach(modal => {
-                        modal.classList.add('hidden');
+                        if (!modal.classList.contains('hidden')) {
+                            modal.classList.add('modal-hide');
+                            modal.classList.remove('modal-show');
+                            
+                            setTimeout(() => {
+                                modal.classList.add('hidden');
+                                document.body.style.overflow = 'auto';
+                            }, 300);
+                        }
                     });
-                    document.body.style.overflow = 'auto';
                 }
             });
 
