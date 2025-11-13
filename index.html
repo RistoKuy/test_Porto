@@ -99,7 +99,7 @@
 
         <!-- About Me Section -->
         <section id="about" class="py-12 sm:py-16 md:py-20 bg-white">
-            <div class="container mx-auto px-4 sm:px-6">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-10 sm:mb-12 md:mb-16">
                     <h2 class="notable-regular text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4" data-aos="fade-right" data-aos-offset="200">
                         About <span class="text-red-500">Me</span>
@@ -224,7 +224,84 @@
                     </h2>
                     <div class="w-20 sm:w-24 h-1 bg-red-500 mx-auto" data-aos="fade-left" data-aos-offset="300"></div>
                 </div>
-                
+                    
+                    <!-- Portfolio Item 2 - Design Works -->
+                    <div class="bg-white overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative overflow-hidden">
+                            <!-- Design Carousel -->
+                            <div class="relative h-[50vh] sm:h-[60vh] md:h-[70vh]">
+                                <div class="poster-carousel h-full">
+                                    <div class="poster-slide active">
+                                        <img src="img/poster1.png" alt="Poster Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                    <div class="poster-slide">
+                                        <img src="img/package1.png" alt="Packaging Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                    <div class="poster-slide">
+                                        <img src="img/booklet1.png" alt="Booklet Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                    <div class="poster-slide">
+                                        <img src="img/merch1.jpg" alt="Merch Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                </div>
+                                <!-- Carousel Controls -->
+                                <button onclick="changePosterSlide(-1)" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
+                                    <i class="fas fa-chevron-left text-2xl sm:text-3xl md:text-4xl"></i>
+                                </button>
+                                <button onclick="changePosterSlide(1)" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
+                                    <i class="fas fa-chevron-right text-2xl sm:text-3xl md:text-4xl"></i>
+                                </button>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col items-center justify-end pb-8 sm:pb-12 md:pb-16 pointer-events-none">
+                                <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3">Design Works</h3>
+                                <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6">Poster, Packaging & Booklet Design</p>
+                                <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
+                                    <span class="bg-red-600 text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium">Design</span>
+                                </div>
+                                <button onclick="openModal('designModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors pointer-events-auto">Info</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 3 - Illustration Works -->
+                    <div class="bg-white overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative overflow-hidden">
+                            <!-- Illustration Carousel -->
+                            <div class="relative h-[50vh] sm:h-[60vh] md:h-[70vh]">
+                                <div class="illustration-carousel h-full">
+                                    <div class="illustration-slide active">
+                                        <img src="img/illust1.png" alt="Personal Illustration" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                    <div class="illustration-slide">
+                                        <img src="img/chara1.png" alt="Character Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                    <div class="illustration-slide">
+                                        <img src="img/story1.jpg" alt="Storybook Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                    <div class="illustration-slide">
+                                        <img src="img/editorial1.jpg" alt="Editorial Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
+                                    </div>
+                                </div>
+                                <!-- Carousel Controls -->
+                                <button onclick="changeIllustrationSlide(-1)" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
+                                    <i class="fas fa-chevron-left text-2xl sm:text-3xl md:text-4xl"></i>
+                                </button>
+                                <button onclick="changeIllustrationSlide(1)" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
+                                    <i class="fas fa-chevron-right text-2xl sm:text-3xl md:text-4xl"></i>
+                                </button>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col items-center justify-end pb-8 sm:pb-12 md:pb-16 pointer-events-none">
+                                <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3">Illustration Works</h3>
+                                <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6">Personal Illustration & Character Design</p>
+                                <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
+                                    <span class="bg-red-600 text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium">Illustration</span>
+                                </div>
+                                <button onclick="openModal('illustrationModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors pointer-events-auto">Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="w-full space-y-0">
                     <!-- Portfolio Item 1 - Photography -->
                     <div class="bg-white overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
@@ -257,80 +334,12 @@
                                 <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3">Photography</h3>
                                 <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6">Portrait, Event & Commercial Photography</p>
                                 <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
-                                    <span class="bg-blue-600 text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium">Photography</span>
+                                    <span class="bg-red-600 text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium">Photography</span>
                                 </div>
                                 <button onclick="openModal('photographyModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors pointer-events-auto">Info</button>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Portfolio Item 2 - Design Works -->
-                    <div class="bg-white overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
-                        <div class="relative overflow-hidden">
-                            <!-- Design Carousel -->
-                            <div class="relative h-[50vh] sm:h-[60vh] md:h-[70vh]">
-                                <div class="poster-carousel h-full">
-                                    <div class="poster-slide active">
-                                        <img src="img/poster1.png" alt="Poster Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
-                                    </div>
-                                    <div class="poster-slide">
-                                        <img src="img/package1.png" alt="Packaging Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
-                                    </div>
-                                    <div class="poster-slide">
-                                        <img src="img/booklet1.png" alt="Booklet Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
-                                    </div>
-                                </div>
-                                <!-- Carousel Controls -->
-                                <button onclick="changePosterSlide(-1)" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
-                                    <i class="fas fa-chevron-left text-2xl sm:text-3xl md:text-4xl"></i>
-                                </button>
-                                <button onclick="changePosterSlide(1)" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
-                                    <i class="fas fa-chevron-right text-2xl sm:text-3xl md:text-4xl"></i>
-                                </button>
-                            </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col items-center justify-end pb-8 sm:pb-12 md:pb-16 pointer-events-none">
-                                <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3">Design Works</h3>
-                                <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6">Poster, Packaging & Booklet Design</p>
-                                <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
-                                    <span class="bg-purple-600 text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium">Design</span>
-                                </div>
-                                <button onclick="openModal('designModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors pointer-events-auto">Info</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Portfolio Item 3 - Illustration Works -->
-                    <div class="bg-white overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
-                        <div class="relative overflow-hidden">
-                            <!-- Illustration Carousel -->
-                            <div class="relative h-[50vh] sm:h-[60vh] md:h-[70vh]">
-                                <div class="illustration-carousel h-full">
-                                    <div class="illustration-slide active">
-                                        <img src="img/illust1.png" alt="Personal Illustration" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
-                                    </div>
-                                    <div class="illustration-slide">
-                                        <img src="img/chara1.png" alt="Character Design" class="w-full h-full object-cover cursor-pointer" onclick="openImageZoom(this.src)">
-                                    </div>
-                                </div>
-                                <!-- Carousel Controls -->
-                                <button onclick="changeIllustrationSlide(-1)" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
-                                    <i class="fas fa-chevron-left text-2xl sm:text-3xl md:text-4xl"></i>
-                                </button>
-                                <button onclick="changeIllustrationSlide(1)" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors drop-shadow-lg z-10">
-                                    <i class="fas fa-chevron-right text-2xl sm:text-3xl md:text-4xl"></i>
-                                </button>
-                            </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col items-center justify-end pb-8 sm:pb-12 md:pb-16 pointer-events-none">
-                                <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3">Illustration Works</h3>
-                                <p class="text-base sm:text-lg md:text-xl text-gray-200 mb-4 sm:mb-6">Personal Illustration & Character Design</p>
-                                <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-4 sm:mb-6 px-4">
-                                    <span class="bg-red-600 text-white text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-medium">Illustration</span>
-                                </div>
-                                <button onclick="openModal('illustrationModal')" class="bg-white text-gray-800 hover:bg-gray-100 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-colors pointer-events-auto">Info</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 
                 <!-- Add CSS for carousel slides -->
                 <style>
@@ -396,7 +405,7 @@
         <div id="designModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
             <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
                 <!-- Modal Header -->
-                <div class="sticky top-0 bg-gradient-to-r from-purple-600 to-purple-700 text-white p-6 rounded-t-2xl">
+                <div class="sticky top-0 bg-gradient-to-r from-red-600 to-red-700 text-white p-6 rounded-t-2xl">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
@@ -425,21 +434,21 @@
                         <h4 class="text-lg font-bold text-gray-800 mb-3">What I Offer:</h4>
                         <ul class="space-y-3">
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-purple-600 mt-1"></i>
+                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
                                 <div>
                                     <strong class="text-gray-800">Poster Design</strong>
                                     <p class="text-gray-600">Event posters, promotional materials, and visual campaigns that grab attention</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-purple-600 mt-1"></i>
+                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
                                 <div>
                                     <strong class="text-gray-800">Packaging Design</strong>
                                     <p class="text-gray-600">Product packaging that stands out on shelves and connects with consumers</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-purple-600 mt-1"></i>
+                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
                                 <div>
                                     <strong class="text-gray-800">Booklet Design</strong>
                                     <p class="text-gray-600">Catalogs, brochures, and multi-page layouts with cohesive visual storytelling</p>
@@ -450,7 +459,7 @@
                     
                     <!-- CTA Button -->
                     <div class="text-center">
-                        <a href="#contact" onclick="closeModal('designModal')" class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                        <a href="#contact" onclick="closeModal('designModal')" class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                             Get in Touch
                         </a>
                     </div>
@@ -528,7 +537,7 @@
         <div id="photographyModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
             <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform transition-all">
                 <!-- Modal Header -->
-                <div class="sticky top-0 bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6 rounded-t-2xl">
+                <div class="sticky top-0 bg-gradient-to-r from-red-600 to-red-700 text-white p-6 rounded-t-2xl">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
@@ -557,28 +566,28 @@
                         <h4 class="text-lg font-bold text-gray-800 mb-3">What I Offer:</h4>
                         <ul class="space-y-3">
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
                                 <div>
                                     <strong class="text-gray-800">Portrait Photography</strong>
                                     <p class="text-gray-600">Professional headshots and personal portraits that capture your unique personality</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
                                 <div>
                                     <strong class="text-gray-800">Event Photography</strong>
                                     <p class="text-gray-600">Complete coverage of your special events, from corporate to social gatherings</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
                                 <div>
                                     <strong class="text-gray-800">Commercial Photography</strong>
                                     <p class="text-gray-600">Product photography, advertising campaigns, and brand content creation</p>
                                 </div>
                             </li>
                             <li class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                                <i class="fas fa-check-circle text-red-600 mt-1"></i>
                                 <div>
                                     <strong class="text-gray-800">Creative Composition</strong>
                                     <p class="text-gray-600">Artistic approach with professional lighting and post-processing</p>
@@ -589,7 +598,7 @@
                     
                     <!-- CTA Button -->
                     <div class="text-center">
-                        <a href="#contact" onclick="closeModal('photographyModal')" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                        <a href="#contact" onclick="closeModal('photographyModal')" class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                             Get in Touch
                         </a>
                     </div>
@@ -624,13 +633,9 @@
         </div>
 
         <!-- Footer -->
-        <footer class="bg-blue-600 text-white text-center py-8">
+        <footer class="bg-black text-white text-center py-8">
             <div class="container mx-auto px-4">
-                <!-- <p class="text-lg font-semibold">Designed & Powered by LB32 - New Media</p>
-                <p class="text-3xl font-normal text-white mt-4" data-node-id="2:14453">
-                    By Falisha Aulia Syarafia
-                </p> -->
-                <p class="text-blue-200 mt-2">© 2025 All rights reserved.</p>
+            <p class="text-gray-400 mt-2">© 2025 All rights reserved.</p>
             </div>
         </footer>
 
