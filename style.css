@@ -130,3 +130,44 @@ html {
 #zoomedImage {
     transition: opacity 0.2s ease-in-out;
 }
+
+/* Hamburger menu animations */
+.hamburger-menu {
+    cursor: pointer;
+}
+
+.hamburger-line {
+    transform-origin: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Active state - hamburger transforms to X */
+.hamburger-active .hamburger-line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-active .hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.hamburger-active .hamburger-line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Hover effect for hamburger */
+.hamburger-menu:hover .hamburger-line {
+    background-color: #374151;
+}
+
+/* Mobile menu animation styles */
+#mobile-menu {
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.3s ease-in-out;
+}
+
+/* Menu link stagger animation */
+#mobile-menu a {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.3s ease-in-out;
+}

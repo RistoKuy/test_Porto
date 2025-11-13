@@ -47,19 +47,23 @@
                     </div>
                     
                     <!-- Mobile menu button -->
-                    <button class="md:hidden text-gray-700 p-2" id="mobile-menu-button">
-                        <i class="fas fa-bars text-xl"></i>
+                    <button class="md:hidden text-gray-700 p-2 relative" id="mobile-menu-button">
+                        <div class="hamburger-menu w-6 h-5 relative flex flex-col justify-between transform transition-all duration-300 ease-in-out">
+                            <span class="hamburger-line bg-gray-700 h-0.5 w-full transform transition-all duration-300 ease-in-out"></span>
+                            <span class="hamburger-line bg-gray-700 h-0.5 w-full transform transition-all duration-300 ease-in-out"></span>
+                            <span class="hamburger-line bg-gray-700 h-0.5 w-full transform transition-all duration-300 ease-in-out"></span>
+                        </div>
                     </button>
                 </div>
             </div>
             
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden bg-white shadow-lg hidden">
+            <div id="mobile-menu" class="md:hidden bg-white shadow-lg overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
                 <div class="px-4 py-3 space-y-1">
-                    <a href="#home" class="block py-3 text-base text-gray-700 hover:text-blue-600 border-b border-gray-100">Home</a>
-                    <a href="#about" class="block py-3 text-base text-gray-700 hover:text-blue-600 border-b border-gray-100">About Me</a>
-                    <a href="#portofolio" class="block py-3 text-base text-gray-700 hover:text-blue-600 border-b border-gray-100">Works</a>
-                    <a href="#contact" class="block py-3 text-base text-gray-700 hover:text-blue-600">Contact Me</a>
+                    <a href="#home" class="block py-3 text-base text-gray-700 hover:text-blue-600 border-b border-gray-100 transform transition-all duration-300 ease-in-out translate-x-[-20px] opacity-0">Home</a>
+                    <a href="#about" class="block py-3 text-base text-gray-700 hover:text-blue-600 border-b border-gray-100 transform transition-all duration-300 ease-in-out translate-x-[-20px] opacity-0">About Me</a>
+                    <a href="#portofolio" class="block py-3 text-base text-gray-700 hover:text-blue-600 border-b border-gray-100 transform transition-all duration-300 ease-in-out translate-x-[-20px] opacity-0">Works</a>
+                    <a href="#contact" class="block py-3 text-base text-gray-700 hover:text-blue-600 transform transition-all duration-300 ease-in-out translate-x-[-20px] opacity-0">Contact Me</a>
                 </div>
             </div>
         </nav>
@@ -152,9 +156,7 @@
                                         </p>
                                         <!-- Skills Tags -->
                                         <div class="flex flex-wrap gap-2 mt-4">
-                                            <span class="px-2.5 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full font-medium">Graphic Design</span>
-                                            <span class="px-2.5 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full font-medium">Visual Communication</span>
-                                            <span class="px-2.5 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full font-medium">Adobe Creative Suite</span>
+                                            <span class="px-2.5 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm rounded-full font-medium">Design Team</span>
                                         </div>
                                     </div>
                                 </div>
@@ -399,6 +401,14 @@
                             </div>
                             <span class="text-xl font-semibold text-gray-800 group-hover:text-pink-600 transition-colors">Instagram</span>
                         </a>
+                        
+                        <!-- Gmail -->
+                        <button onclick="copyEmail()" class="group flex flex-col items-center transform hover:scale-110 transition-transform duration-300">
+                            <div class="w-32 h-32 sm:w-40 sm:h-40 mb-4 rounded-full overflow-hidden shadow-lg group-hover:shadow-2xl transition-shadow">
+                                <img src="img/gmail.png" alt="Gmail" class="w-full h-full object-cover">
+                            </div>
+                            <span class="text-xl font-semibold text-gray-800 group-hover:text-red-600 transition-colors">Gmail</span>
+                        </button>
                     </div>
                     
                     <!-- Optional message -->
@@ -655,13 +665,55 @@
                 once: true
             });
             
-            // Mobile menu toggle
+            // Mobile menu toggle with animations
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
+            const hamburgerMenu = mobileMenuButton.querySelector('.hamburger-menu');
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            let isMenuOpen = false;
             
             if (mobileMenuButton && mobileMenu) {
                 mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
+                    isMenuOpen = !isMenuOpen;
+                    
+                    if (isMenuOpen) {
+                        // Open menu
+                        mobileMenu.style.maxHeight = '300px';
+                        mobileMenu.style.opacity = '1';
+                        
+                        // Animate hamburger to X
+                        hamburgerMenu.classList.add('hamburger-active');
+                        
+                        // Animate menu items in with stagger
+                        menuLinks.forEach((link, index) => {
+                            setTimeout(() => {
+                                link.style.transform = 'translateX(0)';
+                                link.style.opacity = '1';
+                            }, index * 100 + 150);
+                        });
+                    } else {
+                        // Close menu
+                        mobileMenu.style.maxHeight = '0';
+                        mobileMenu.style.opacity = '0';
+                        
+                        // Animate hamburger back to lines
+                        hamburgerMenu.classList.remove('hamburger-active');
+                        
+                        // Animate menu items out
+                        menuLinks.forEach((link) => {
+                            link.style.transform = 'translateX(-20px)';
+                            link.style.opacity = '0';
+                        });
+                    }
+                });
+                
+                // Close menu when clicking on links
+                menuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (isMenuOpen) {
+                            mobileMenuButton.click();
+                        }
+                    });
                 });
             }
             
@@ -982,6 +1034,79 @@
                     changeZoomedImage(1);
                 }
             });
+
+            // Copy email function
+            function copyEmail() {
+                const email = 'falisha.aulia@gmail.com';
+                
+                // Use modern clipboard API if available
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(email).then(() => {
+                        showCopyMessage();
+                    }).catch(() => {
+                        // Fallback to execCommand
+                        fallbackCopyTextToClipboard(email);
+                    });
+                } else {
+                    // Fallback for older browsers
+                    fallbackCopyTextToClipboard(email);
+                }
+            }
+
+            // Fallback copy function for older browsers
+            function fallbackCopyTextToClipboard(text) {
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                textArea.style.top = '0';
+                textArea.style.left = '0';
+                textArea.style.position = 'fixed';
+                
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                
+                try {
+                    document.execCommand('copy');
+                    showCopyMessage();
+                } catch (err) {
+                    console.error('Fallback: Oops, unable to copy', err);
+                }
+                
+                document.body.removeChild(textArea);
+            }
+
+            // Show copy success message
+            function showCopyMessage() {
+                // Remove existing popup if any
+                const existingPopup = document.getElementById('copyPopup');
+                if (existingPopup) {
+                    existingPopup.remove();
+                }
+                
+                // Create popup element
+                const popup = document.createElement('div');
+                popup.id = 'copyPopup';
+                popup.className = 'fixed top-20 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-[60] transition-all duration-300 flex items-center';
+                popup.style.transform = 'translate(-50%, -20px)';
+                popup.style.opacity = '0';
+                popup.innerHTML = '<i class="fas fa-check mr-2"></i>Email copied to clipboard!';
+                document.body.appendChild(popup);
+                
+                // Animate in
+                setTimeout(() => {
+                    popup.style.opacity = '1';
+                    popup.style.transform = 'translate(-50%, 0)';
+                }, 10);
+                
+                // Hide after 3 seconds
+                setTimeout(() => {
+                    popup.style.opacity = '0';
+                    popup.style.transform = 'translate(-50%, -20px)';
+                    setTimeout(() => {
+                        popup.remove();
+                    }, 300);
+                }, 3000);
+            }
         </script>
     </body>
 </html>
